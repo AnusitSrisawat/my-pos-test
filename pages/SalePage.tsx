@@ -37,12 +37,17 @@ export default function SalePage() {
     // };
 
     return (
-        <div className="relative bg-slate-400 flex flex-row items-start min-h-screen w-full">
-            <div className='w-3/5'>
-                <Product />
+        <div className='h-screen w-full flex flex-col overflow-hidden'>
+            <div className='w-full bg-slate-500'>
+                1
             </div>
-            <div className='w-2/5'>
-                <Cal />
+            <div className="relative bg-slate-400 flex flex-row items-start grow w-full">
+                <div className='w-3/5 h-full bg-slate-100'>
+                    <Product />
+                </div>
+                <div className='w-2/5 h-full bg-slate-200'>
+                    <Cal />
+                </div>
             </div>
         </div>
     );

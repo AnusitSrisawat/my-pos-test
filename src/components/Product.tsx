@@ -6,7 +6,7 @@ export default function Product() {
     useEffect(() => {
         // Function to call when component starts
         handleClick();
-    }, []); 
+    }, []);
 
     const [login, setLogin] = useState(true);
     const [product, setProduct] = useState([]);
@@ -44,14 +44,20 @@ export default function Product() {
     };
 
     return (
-        <div className="relative bg-blue-300 flex flex-col items-start gap-4 min-h-screen w-full">
+        <div className="relative bg-blue-200 flex flex-row flex-wrap justify-around items-start gap-4 p-4 w-full h-max overflow-auto">
             {product.map((item: any) => (
-                <div key={item.id}>
-                    <img className='w-20 h-20 object-cover' src={item.image} alt={item.name} />
-                    <h3 className="text-red-950">{item.name}</h3>
-                    <p>{item.description}</p>
-                    <p>Price: ${item.price}</p>
-                    <p>Category: {item.category}</p>
+                <div id={item.id} className='cursor-pointer border-2 border-transparent hover:border-2 hover:border-black rounded-xl active:scale-95 duration-200'>
+                    <div className='w-44 h-44 object-cover'>
+                        <img className='w-full h-full object-cover' src={item.image} alt={item.name} />
+                    </div>
+                    <div className='px-2'>
+                    <div className='flex flex-row justify-between w-full'>
+                        <h3 className="">{item.name}</h3>
+                        <p>${item.price}</p>
+                    </div>
+                    <p className='text-xs'>{item.description}</p>
+                    {/* <p>Category: {item.category}</p> */}
+                    </div>
                 </div>
             ))}
         </div>

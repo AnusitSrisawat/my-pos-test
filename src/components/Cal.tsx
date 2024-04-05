@@ -6,7 +6,7 @@ export default function Cal() {
     useEffect(() => {
         // Function to call when component starts
         handleClick();
-    }, []); 
+    }, []);
 
     const [login, setLogin] = useState(true);
     const [product, setProduct] = useState([]);
@@ -44,16 +44,10 @@ export default function Cal() {
     };
 
     return (
-        <div className="relative bg-blue-300 flex flex-col items-start gap-4 min-h-screen w-full">
-            {product.map((item: any) => (
-                <div key={item.id}>
-                    <img className='w-20 h-20 object-cover' src={item.image} alt={item.name} />
-                    <h3>{item.name}</h3>
-                    <p>{item.description}</p>
-                    <p>Price: ${item.price}</p>
-                    <p>Category: {item.category}</p>
-                </div>
-            ))}
+        <div className="relative bg-blue-300 flex flex-col items-start gap-4 h-full w-full">
+            <div className='bg-slate-200 rounded-3xl w-full h-full m-4'>
+
+            </div>
         </div>
     );
 }
