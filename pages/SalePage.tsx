@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Product from './Product';
+import Cal from './Cal';
 
 export default function SalePage() {
 
@@ -36,8 +37,9 @@ export default function SalePage() {
     // };
 
     return (
-        <div className="relative bg-slate-400 flex flex-col items-center gap-4 min-h-screen w-full">
+        <div className="relative bg-slate-400 flex flex-col items-start gap-4 min-h-screen w-full">
            <Product />
+           <Cal />
         </div>
     );
 }
