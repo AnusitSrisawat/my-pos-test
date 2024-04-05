@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 // import { getSession } from 'next-auth/client';
 // import { connectToDatabase } from '../../utils/db'; // Assuming you have a utility file for database connection
+import { products } from '../../../src/json/product'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
@@ -42,7 +43,7 @@ async function handleGet(req: NextApiRequest, res: NextApiResponse) {
   } else {
     // Get all items
     // Example: const items = await db.collection('items').find().toArray();
-    return res.status(200).json({ message: 'Get all items' });
+    return res.status(200).json(products);
   }
 }
 

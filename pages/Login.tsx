@@ -5,6 +5,11 @@ export default function Login() {
 
     const [login, setLogin] = useState(true);
 
+    const handleClick = async () => {
+        const response = await fetch('/api/product').then(res => res.json());
+        console.log(response);
+      };
+
     return (
         <div className="relative bg-blue-300 flex flex-col items-center gap-4 min-h-screen w-full">
             <div className='absolute z-10 p-2 bg-slate-300 rounded-xl m-2 cursor-pointer' onClick={() => setLogin(!login)}>switch</div>
@@ -16,7 +21,7 @@ export default function Login() {
                     <label htmlFor="password">password</label>
                     <input name="password" type="text" />
                     {login? "1" : "0"}
-                    <button className="border border-blue-950 rounded-xl p-2" type="submit">submit</button>
+                    <button className="border border-blue-950 rounded-xl p-2" type="submit" onClick={handleClick}>submit</button>
                 </div>
             </div>
         </div>
