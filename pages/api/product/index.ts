@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 // import { getSession } from 'next-auth/client';
 // import { connectToDatabase } from '../../utils/db'; // Assuming you have a utility file for database connection
-import { products } from '../../../src/json/product'
+import { products } from '/src/json/product'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;

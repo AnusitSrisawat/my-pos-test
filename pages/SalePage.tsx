@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import Product from './Product';
 import Cal from './Cal';
+import Product from '../src/components/Product';
 
 export default function SalePage() {
 

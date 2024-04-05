@@ -48,7 +48,7 @@ export default function Product() {
             {product.map(item => (
                 <div key={item.id}>
                     <img className='w-20 h-20 object-cover' src={item.image} alt={item.name} />
-                    <h3>{item.name}</h3>
+                    <h3 className="text-red-950">{item.name}</h3>
                     <p>{item.description}</p>
                     <p>Price: ${item.price}</p>
                     <p>Category: {item.category}</p>
