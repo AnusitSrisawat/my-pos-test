@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getSession } from 'next-auth/client';
-import { connectToDatabase } from '../../utils/db'; // Assuming you have a utility file for database connection
+// import { getSession } from 'next-auth/client';
+// import { connectToDatabase } from '../../utils/db'; // Assuming you have a utility file for database connection
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
@@ -47,10 +47,10 @@ async function handleGet(req: NextApiRequest, res: NextApiResponse) {
 }
 
 async function handlePost(req: NextApiRequest, res: NextApiResponse) {
-  const session = await getSession({ req });
-  if (!session) {
-    return res.status(401).json({ message: 'Unauthorized' });
-  }
+  // const session = await getSession({ req });
+  // if (!session) {
+  //   return res.status(401).json({ message: 'Unauthorized' });
+  // }
 
   const { data } = req.body;
   if (!data) {
@@ -63,10 +63,10 @@ async function handlePost(req: NextApiRequest, res: NextApiResponse) {
 }
 
 async function handlePut(req: NextApiRequest, res: NextApiResponse) {
-  const session = await getSession({ req });
-  if (!session) {
-    return res.status(401).json({ message: 'Unauthorized' });
-  }
+  // const session = await getSession({ req });
+  // if (!session) {
+  //   return res.status(401).json({ message: 'Unauthorized' });
+  // }
 
   const { id } = req.query;
   const { data } = req.body;
@@ -80,10 +80,10 @@ async function handlePut(req: NextApiRequest, res: NextApiResponse) {
 }
 
 async function handleDelete(req: NextApiRequest, res: NextApiResponse) {
-  const session = await getSession({ req });
-  if (!session) {
-    return res.status(401).json({ message: 'Unauthorized' });
-  }
+  // const session = await getSession({ req });
+  // if (!session) {
+  //   return res.status(401).json({ message: 'Unauthorized' });
+  // }
 
   const { id } = req.query;
   if (!id) {
