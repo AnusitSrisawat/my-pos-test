@@ -45,7 +45,7 @@ export default function Cal() {
 
     return (
         <div className="relative bg-blue-300 flex flex-col items-start gap-4 min-h-screen w-full">
-            {product.map(item => (
+            {product.map((item: any) => (
                 <div key={item.id}>
                     <img className='w-20 h-20 object-cover' src={item.image} alt={item.name} />
                     <h3>{item.name}</h3>
