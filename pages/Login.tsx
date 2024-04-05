@@ -53,6 +53,7 @@ export default function Login() {
                         <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
                     )}
                 </form>
+            <a href="/SalePage">SalePage</a>
             </div>
         </div>
     );
