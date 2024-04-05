@@ -44,7 +44,7 @@ export default function Product() {
     };
 
     return (
-        <div className="relative bg-blue-200 flex flex-row flex-wrap justify-around items-start gap-4 p-4 w-full h-max overflow-auto">
+        <div className="relative bg-blue-200 flex flex-row flex-wrap justify-around items-start gap-4 p-4 w-full">
             {product.map((item: any) => (
                 <div id={item.id} className='cursor-pointer border-2 border-transparent hover:border-2 hover:border-black rounded-xl active:scale-95 duration-200'>
                     <div className='w-44 h-44 object-cover'>

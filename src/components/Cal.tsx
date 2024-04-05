@@ -44,8 +44,8 @@ export default function Cal() {
     };
 
     return (
-        <div className="relative bg-blue-300 flex flex-col items-start gap-4 h-full w-full">
-            <div className='bg-slate-200 rounded-3xl w-full h-full m-4'>
+        <div className="relative bg-blue-300 flex flex-col items-start gap-4 p-4 h-full w-full">
+            <div className='bg-slate-200 rounded-3xl w-full h-full'>
 
             </div>
         </div>
