@@ -20,17 +20,25 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
 
 
     useEffect(() => {
-
-    }, []);
+        // console.log("items", items);
+        // console.log("items", items.length);
+        
+    }, [items]);
 
     return (
         <div className="relative flex flex-col items-start gap-4 p-4 h-full w-full">
             <div className='bg-slate-200 rounded-3xl w-full h-full flex flex-col justify-start items-start overflow-hidden'>
                 <div className='relative w-full h-[10%] flex items-center gap-4 p-2 bg-slate-500'>
                     <div className='text-center w-full'>รายการสินค้า</div>
-                    <div
-                        className='absolute top-0 right-0 text-center mx-2 my-2 bg-red-500 px-2 border-2 border-transparent hover:border-2 cursor-pointer hover:border-black rounded-xl hover:scale-[0.99]'
-                        onClick={() => onResetData()}>reset</div>
+                    
+                    {items.length < 1 ? (
+                        ''
+                    ) : (
+                        <div
+                            className='absolute top-0 right-0 text-center mx-2 my-2 bg-red-500 px-2 border-2 border-transparent hover:border-2 cursor-pointer hover:border-black rounded-xl hover:scale-[0.99]'
+                            onClick={() => onResetData()}>reset</div>
+                    )
+                    }
                 </div>
 
                 <div className='w-full h-[80%] overflow-auto p-2'>
@@ -65,7 +73,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                     <div className='text-center w-full'>{(sumPrice).toFixed(2)} ฿</div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
