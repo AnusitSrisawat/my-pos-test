@@ -7,6 +7,7 @@ interface Item {
     id: number;
     name: string;
     qty: number;
+    price: number;
 }
 
 export default function SalePage() {
@@ -54,8 +55,31 @@ export default function SalePage() {
                 id: itemToAdd.id,
                 name: itemToAdd.name,
                 qty: 1,
+                price: itemToAdd.price,
             };
             setItems([...items, newItem]);
+        }
+
+        console.log("items", items);  // Note: This will log the previous state due to asynchronous nature of setItems
+    };
+    const handleSubItem = (itemToAdd: any) => {
+        console.log("handleAddItem");
+
+        // Check if the item already exists in the items list
+        const existingItem = items.find(item => item.id === itemToAdd.id);
+
+        if (existingItem) {
+            // If item exists, update its quantity by increasing it by 1
+            const updatedItems = items.map(item => {
+                if (item.id === itemToAdd.id && item.qty > 1) {
+                    return {
+                        ...item,
+                        qty: item.qty - 1  // Increment quantity
+                    };
+                }
+                return item;
+            });
+            setItems(updatedItems);
         }
 
         console.log("items", items);  // Note: This will log the previous state due to asynchronous nature of setItems
@@ -66,24 +90,29 @@ export default function SalePage() {
         setItems(updatedItems);
     };
 
-    const handleEditItem = (id: number) => {
-        const itemToEdit = items.find(item => item.id === id);
-        if (itemToEdit) {
-            // setItemName(itemToEdit.name);
-            // setEditIndex(id);
-        }
+    const handleResetItem = () => {
+        // localStorage.removeItem("items")
+        setItems([])
     };
 
-    const handleUpdateItem = () => {
-        // if (editIndex !== null && itemName.trim() !== '') {
-        //     const updatedItems = items.map(item =>
-        //         item.id === editIndex ? { ...item, name: itemName.trim() } : item
-        //     );
-        //     setItems(updatedItems);
-        //     setItemName('');
-        //     setEditIndex(null);
-        // }
-    };
+    // const handleEditItem = (id: number) => {
+    //     const itemToEdit = items.find(item => item.id === id);
+    //     if (itemToEdit) {
+    //         // setItemName(itemToEdit.name);
+    //         // setEditIndex(id);
+    //     }
+    // };
+
+    // const handleUpdateItem = () => {
+    //     // if (editIndex !== null && itemName.trim() !== '') {
+    //     //     const updatedItems = items.map(item =>
+    //     //         item.id === editIndex ? { ...item, name: itemName.trim() } : item
+    //     //     );
+    //     //     setItems(updatedItems);
+    //     //     setItemName('');
+    //     //     setEditIndex(null);
+    //     // }
+    // };
 
     return (
         <div className='h-screen w-full flex flex-col overflow-hidden'>
@@ -91,16 +120,19 @@ export default function SalePage() {
                 1
             </div>
             <div className="relative bg-slate-400 flex flex-row items-start h-[95%] w-full">
-                <div className='w-[70%] h-full bg-slate-100 overflow-auto'>
+                <div className='w-[70%] h-full bg-blue-200 overflow-auto'>
                     <Product
                         items={items}
                         onAddData={handleAddItem}
                     />
                 </div>
-                <div className='w-[30%] h-full bg-slate-200 overflow-auto'>
+                <div className='w-[30%] h-full bg-blue-300 overflow-auto'>
                     <Cal
                         items={items}
                         onAddData={handleAddItem}
+                        onSubData={handleSubItem}
+                        onDeleteData={handleDeleteItem}
+                        onResetData={handleResetItem}
                     />
                 </div>
             </div>

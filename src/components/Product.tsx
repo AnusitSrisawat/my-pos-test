@@ -5,6 +5,7 @@ interface Item {
     id: number;
     name: string;
     qty: number;
+    price: number;
 }
 
 interface ProductProps {
@@ -15,7 +16,7 @@ interface ProductProps {
 const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
 
     const [product, setProduct] = useState([]);
-    
+
     useEffect(() => {
         // Function to call when component starts
         handleClick();
@@ -30,7 +31,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
 
 
     return (
-        <div className='flex flex-col justify-center items-start gap-4 p-4 bg-blue-200'>
+        <div className='flex flex-col justify-center items-start gap-4 p-4'>
             <div className='w-full text-center'>
                 รายการสินค้า
             </div>
