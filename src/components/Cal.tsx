@@ -26,7 +26,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
     }, [items]);
 
     return (
-        <div className="relative flex flex-col items-start gap-4 p-4 h-full w-full">
+        <div className="relative flex flex-col items-start gap-4 p-6 h-full w-full">
             <div className='bg-slate-200 rounded-3xl w-full h-full flex flex-col justify-start items-start overflow-hidden'>
                 <div className='relative w-full h-[10%] flex items-center gap-4 p-2 bg-slate-300'>
                     <div className='text-center w-full'>รายการสินค้า</div>

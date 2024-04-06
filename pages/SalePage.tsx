@@ -143,8 +143,8 @@ export default function SalePage() {
                         <img className='w-full h-full object-cover' src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg" alt="" />
                     </div>
                 </div>
-                <div className={'absolute h-4 flex justify-center items-start bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-slate-700 px-2 z-10 cursor-pointer duration-500' + (showNav ? ' translate-y-0 rounded-t-lg' : ' translate-y-full rounded-b-lg')} onClick={() => {setShowNav(!showNav)}}>
-                    v
+                <div className={'absolute h-5 flex justify-center items-start bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-slate-700 px-2 z-10 cursor-pointer ' + (showNav ? ' translate-y-0 rounded-t-lg leading-[1.1]' : ' translate-y-full rounded-b-lg leading-[0.8]')} onClick={() => { setShowNav(!showNav) }}>
+                    {showNav ? 'close' : 'open'}
                 </div>
             </div>
             <div className={"relative bg-slate-400 flex flex-row items-start w-full duration-500" + (showNav ? ' h-[90%]' : ' h-[100%]')}>

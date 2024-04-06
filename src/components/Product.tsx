@@ -33,7 +33,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
 
 
     return (
-        <div className='flex flex-col justify-center items-start gap-4 p-4'>
+        <div className='flex flex-col justify-center items-start gap-4 p-6'>
             <div className='w-full text-center'>
                 รายการสินค้า
             </div>
