@@ -5,7 +5,7 @@ export const products = [
     description: "This is the first product.",
     price: 19.99,
     category: "Electronics",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     description: "This is the second product.",
     price: 29.99,
     category: "Clothing",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     description: "This is the third product.",
     price: 39.99,
     category: "Home & Kitchen",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ export const products = [
     description: "This is the first product.",
     price: 19.99,
     category: "Electronics",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const products = [
     description: "This is the second product.",
     price: 29.99,
     category: "Clothing",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const products = [
     description: "This is the third product.",
     price: 39.99,
     category: "Home & Kitchen",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 1,
@@ -53,7 +53,7 @@ export const products = [
     description: "This is the first product.",
     price: 19.99,
     category: "Electronics",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 2,
@@ -61,7 +61,7 @@ export const products = [
     description: "This is the second product.",
     price: 29.99,
     category: "Clothing",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ export const products = [
     description: "This is the third product.",
     price: 39.99,
     category: "Home & Kitchen",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 1,
@@ -77,7 +77,7 @@ export const products = [
     description: "This is the first product.",
     price: 19.99,
     category: "Electronics",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 2,
@@ -85,7 +85,7 @@ export const products = [
     description: "This is the second product.",
     price: 29.99,
     category: "Clothing",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 3,
@@ -93,7 +93,7 @@ export const products = [
     description: "This is the third product.",
     price: 39.99,
     category: "Home & Kitchen",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 1,
@@ -101,7 +101,7 @@ export const products = [
     description: "This is the first product.",
     price: 19.99,
     category: "Electronics",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 2,
@@ -109,7 +109,7 @@ export const products = [
     description: "This is the second product.",
     price: 29.99,
     category: "Clothing",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 3,
@@ -117,7 +117,7 @@ export const products = [
     description: "This is the third product.",
     price: 39.99,
     category: "Home & Kitchen",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 1,
@@ -125,7 +125,7 @@ export const products = [
     description: "This is the first product.",
     price: 19.99,
     category: "Electronics",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 2,
@@ -133,7 +133,7 @@ export const products = [
     description: "This is the second product.",
     price: 29.99,
     category: "Clothing",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
   {
     id: 3,
@@ -141,6 +141,6 @@ export const products = [
     description: "This is the third product.",
     price: 39.99,
     category: "Home & Kitchen",
-    image: "https://assets-global.website-files.com/619e8d2e8bd4838a9340a810/64c590c754d6bc13ebd90cbc_ai_product_photo_styles.webp"
+    image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg"
   },
 ];

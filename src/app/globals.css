@@ -19,13 +19,13 @@
 ::-webkit-scrollbar-thumb {
   /* background: #88888846; */
   border-radius: 5px;
-  @apply bg-slate-500 opacity-60
+  @apply bg-slate-500 opacity-60 cursor-pointer scroll-smooth
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   /* background: #b42222; */
-  @apply bg-pink-400
+  @apply bg-slate-600
 }
 
 

@@ -42,10 +42,10 @@ export default function SalePage() {
                 1
             </div>
             <div className="relative bg-slate-400 flex flex-row items-start h-[95%] w-full">
-                <div className='w-3/5 h-full bg-slate-100 overflow-auto'>
+                <div className='w-[70%] h-full bg-slate-100 overflow-auto'>
                     <Product />
                 </div>
-                <div className='w-2/5 h-full bg-slate-200 overflow-auto'>
+                <div className='w-[30%] h-full bg-slate-200 overflow-auto'>
                     <Cal />
                 </div>
             </div>

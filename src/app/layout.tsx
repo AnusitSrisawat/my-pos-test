@@ -20,8 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
 
-        {/* <Login /> */}
-        <SalePage />
+        <Login />
+        {/* <SalePage /> */}
 
       </body>
     </html>
