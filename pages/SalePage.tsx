@@ -22,20 +22,20 @@ export default function SalePage() {
         const savedItems = localStorage.getItem('items');
         if (savedItems) {
             setItems(JSON.parse(savedItems));                                        //save local storage มั้ย ??
-            console.log("getItem", items);
+            // console.log("getItem", items);
         }
     }, []);
 
     useEffect(() => {
         // Save items to localStorage whenever items state changes
         localStorage.setItem('items', JSON.stringify(items));
-        console.log("setItem", items);
+        // console.log("setItem", items);
 
         handleSumPrice();
     }, [items]);
 
     const handleAddItem = (itemToAdd: any) => {
-        console.log("handleAddItem");
+        // console.log("handleAddItem");
 
         // Check if the item already exists in the items list
         const existingItem = items.find(item => item.id === itemToAdd.id);
@@ -62,11 +62,10 @@ export default function SalePage() {
             };
             setItems([...items, newItem]);
         }
-
-        console.log("items", items);  // Note: This will log the previous state due to asynchronous nature of setItems
     };
+
     const handleSubItem = (itemToAdd: any) => {
-        console.log("handleAddItem");
+        // console.log("handleSubItem");
 
         // Check if the item already exists in the items list
         const existingItem = items.find(item => item.id === itemToAdd.id);
@@ -84,8 +83,6 @@ export default function SalePage() {
             });
             setItems(updatedItems);
         }
-
-        console.log("items", items);  // Note: This will log the previous state due to asynchronous nature of setItems
     };
 
     const handleDeleteItem = (id: number) => {
