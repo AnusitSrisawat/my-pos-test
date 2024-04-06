@@ -39,7 +39,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
                 {product.map((item: any) => (
                     <div key={item.id}
                         onClick={() => onAddData(item)}
-                        className='cursor-pointer relative flex flex-col gap-2 p-2 border-2 border-transparent hover:border-2 hover:border-black rounded-xl hover:scale-105 duration-200'>
+                        className='cursor-pointer bg-slate-100 bg-opacity-50 relative flex flex-col gap-2 p-2 border-2 border-transparent hover:border-2 hover:border-black rounded-xl hover:scale-105 duration-200'>
                         <div className='relative w-full h-44 object-cover rounded-xl'>
                             <img className='w-full h-full object-cover rounded-xl' src={item.image} alt={item.name} />
 
