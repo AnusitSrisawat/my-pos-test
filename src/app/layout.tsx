@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import '/src/app/globals.css'
 import Login from "../../pages/Login";
-import SalePage from "../../pages/SalePage";
-import { NextUIProvider } from "@nextui-org/react";
-import {Providers} from "./providers";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,17 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-
-    <NextUIProvider>
       <html lang="en">
         <body className={inter.className}>
           <Providers>
             <Login />
-            {/* <SalePage /> */}
           </Providers>
-
         </body>
       </html>
-    </NextUIProvider>
   );
 }
