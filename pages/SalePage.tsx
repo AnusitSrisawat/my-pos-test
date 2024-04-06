@@ -14,6 +14,7 @@ export default function SalePage() {
 
     const [items, setItems] = useState<Item[]>([]);
     const [sumPrice, setSumPrice] = useState(0);
+    const [showNav, setShowNav] = useState(true);
 
     useEffect(() => {
         // Function to call when component starts
@@ -122,10 +123,31 @@ export default function SalePage() {
 
     return (
         <div className='h-screen w-full flex flex-col overflow-hidden'>
-            <div className='w-full bg-slate-500 h-[5%]'>
-                1
+            <div className={'relative w-full bg-slate-800 text-slate-300 flex flex-row justify-between items-center px-4 duration-500' + (showNav ? ' h-[10%] py-2' : ' h-0')}>
+                <div className='flex flex-row gap-8'>
+                    <div className=''>
+                        dashboad
+                    </div>
+                    <div className=''>
+                        dashboad
+                    </div>
+                    <div className=''>
+                        dashboad
+                    </div>
+                </div>
+                <div className='flex flex-row justify-center items-center gap-4'>
+                    <div className=''>
+                        Anusit Srisawat
+                    </div>
+                    <div className='rounded-full overflow-hidden bg-black h-16 w-16 shadow-2xl'>
+                        <img className='w-full h-full object-cover' src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3BmLXMxMDgtcG0tNDExMy1tb2NrdXAuanBn.jpg" alt="" />
+                    </div>
+                </div>
+                <div className={'absolute h-4 flex justify-center items-start bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-slate-700 px-2 z-10 cursor-pointer duration-500' + (showNav ? ' translate-y-0 rounded-t-lg' : ' translate-y-full rounded-b-lg')} onClick={() => {setShowNav(!showNav)}}>
+                    v
+                </div>
             </div>
-            <div className="relative bg-slate-400 flex flex-row items-start h-[95%] w-full">
+            <div className={"relative bg-slate-400 flex flex-row items-start w-full duration-500" + (showNav ? ' h-[90%]' : ' h-[100%]')}>
                 <div className='w-[70%] h-full bg-blue-200 overflow-auto'>
                     <Product
                         items={items}

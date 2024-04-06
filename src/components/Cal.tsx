@@ -35,7 +35,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                         ''
                     ) : (
                         <div
-                            className='absolute top-0 right-0 text-center mx-2 my-2 bg-orange-400 px-2 border-2 border-transparent hover:border-2 cursor-pointer hover:border-black rounded-xl hover:scale-[0.99]'
+                            className='absolute top-0 right-0 text-center mx-2 my-2 bg-orange-400 px-2 border-2 border-transparent hover:border-2 cursor-pointer hover:border-orange-500 rounded-xl hover:scale-[0.99]'
                             onClick={() => onResetData()}>reset</div>
                     )
                     }
@@ -43,8 +43,8 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
 
                 <div className='w-full h-[80%] overflow-auto flex flex-col gap-2 p-2'>
                     {items.map((item: any, index: number) => (
-                        <div key={item.id} className='bg-slate-300 flex flex-row gap-2 border-2 border-transparent hover:border-2 hover:border-black rounded-xl hover:scale-[0.99] duration-200'>
-                            <div className='p-2'>{index + 1}</div>
+                        <div key={item.id} className='bg-slate-300 flex flex-row border-2 border-transparent hover:border-black rounded-xl hover:scale-[0.99] duration-200'>
+                            <div className='p-2'>{index + 1}.</div>
                             <div
                                 className='relative w-full flex flex-col gap-2 p-2 '>
 
@@ -53,18 +53,18 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                                         <div className="">{item.name}</div>
                                         <div className="">ราคา {item.price} ฿</div>
                                     </div>
-                                    <div className='flex flex-row justify-end items-center gap-2'>
+                                    <div className='flex flex-row justify-end items-center gap-4'>
                                         <div className="">จำนวน</div>
-                                        <div className='flex flex-row gap-1 items-center'>
+                                        <div className='flex flex-row gap-2 items-center bg-slate-400 h-full py-1 px-2 rounded-lg'>
                                             <div className="cursor-pointer" onClick={() => onSubData(item)}>
-                                                <img className={'w-4 h-4 object-contain rounded-xl' + (item.qty <= 1 ? " opacity-50" : " ")} src="/images/icons/minus-svgrepo-com.svg" alt="minus" />
+                                                <img className={'w-4 h-4 object-contain rounded-xl hover:scale-150' + (item.qty <= 1 ? " opacity-30" : " ")} src="/images/icons/minus-svgrepo-com.svg" alt="minus" />
                                             </div>
-                                            <div className="bg-white px-2 rounded-lg">{item.qty}</div>
+                                            <div className="bg-slate-300 px-2 rounded-lg">{item.qty}</div>
                                             <div className="cursor-pointer" onClick={() => onAddData(item)}>
-                                                <img className='w-4 h-4 object-contain rounded-xl' src="/images/icons/plus-large-svgrepo-com.svg" alt="plus" />
+                                                <img className='w-4 h-4 object-contain rounded-xl hover:scale-150' src="/images/icons/plus-large-svgrepo-com.svg" alt="plus" />
                                             </div>
                                         </div>
-                                        <div className="flex flex-row gap-1 items-center cursor-pointer bg-red-500 rounded-lg p-1" onClick={() => onDeleteData(item.id)}>
+                                        <div className="flex flex-row gap-1 items-center cursor-pointer bg-red-500 rounded-lg p-1 border-2 border-transparent hover:border-red-700 hover:scale-95" onClick={() => onDeleteData(item.id)}>
                                             <img className='w-6 h-6 object-contain rounded-xl' src="/images/icons/bin-cancel-close-delete-garbage-remove-svgrepo-com.svg" alt="bin" />
                                         </div>
 
@@ -84,8 +84,8 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                 <div className='w-full h-[10%] flex items-center gap-4 p-2 bg-slate-300'>
                     <div className='text-center w-full'>ยอดรวม</div>
                     <div className='flex flex-row items-center gap-4 w-full'>
-                        <div className='text-end w-full'>{(sumPrice).toFixed(2)} ฿</div>
-                        <div className='text-center w-auto whitespace-nowrap border border-red-500 rounded-xl p-2 cursor-pointer bg-red-500'>ชำระเงิน</div>
+                        <div className='text-end w-full font-bold'>{(sumPrice).toFixed(2)} ฿</div>
+                        <div className='text-center w-auto whitespace-nowrap border border-blue-900 rounded-xl p-2 cursor-pointer bg-blue-700 text-white'>ชำระเงิน</div>
                     </div>
                 </div>
             </div>
