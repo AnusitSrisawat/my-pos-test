@@ -24,8 +24,6 @@
   @apply bg-slate-600
 }
 
-
-
 :root {
-  @apply scroll-smooth !font-["Kodchasan"] font-["sans-serif"]
+  @apply scroll-smooth
 }
