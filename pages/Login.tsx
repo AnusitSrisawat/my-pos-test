@@ -1,4 +1,5 @@
 "use client"
+import { Input } from '@nextui-org/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
@@ -7,7 +8,7 @@ import React, { useState } from 'react';
 export default function Login() {
 
     const router = useRouter();
-    
+
     const [login, setLogin] = useState(true);
 
     const handleClick = async () => {
@@ -36,6 +37,7 @@ export default function Login() {
             } else {
                 setLoginError(false)
                 console.error('Login failed');
+                router.push('/SalePage');
             }
         } catch (error) {
             console.error('API Error:', error);
@@ -43,9 +45,39 @@ export default function Login() {
     };
 
     return (
-        <div className="relative bg-blue-300 flex flex-col items-center gap-4 min-h-screen w-full">
-            <div className='absolute z-10 p-2 bg-slate-300 rounded-xl m-2 cursor-pointer' onClick={() => setLogin(!login)}>switch</div>
-            <div className={'absolute duration-1000 bg-blue-700 min-h-screen w-1/2 flex flex-col justify-center items-center gap-4 p-4' + (login ? ' left-full -translate-x-full' : ' left-0')}>
+        <div className="relative bg-blue-300 flex flex-col justify-center items-center gap-4 min-h-screen w-full">
+            {/* <div className='absolute z-10 p-2 bg-slate-300 rounded-xl m-2 cursor-pointer' onClick={() => setLogin(!login)}>switch</div> */}
+            <form onSubmit={handleSubmit} className="border border-blue-950 flex flex-col justify-center items-center gap-4 p-4 rounded-3xl bg-white">
+                <h1>login</h1>
+                <Input
+                    key="1"
+                    id="username"
+                    type="text"
+                    label="Username"
+                    labelPlacement="outside"
+                    // placeholder="Enter your email"
+                    // description="outside"
+                    value={username} onChange={(e) => setUsername(e.target.value)}
+                />
+                <Input
+                    key="2"
+                    id="password"
+                    type="password"
+                    label="password"
+                    labelPlacement="outside"
+                    // placeholder="Enter your email"
+                    // description="outside"
+                    value={password} onChange={(e) => setPassword(e.target.value)}
+                />
+                <button className="border border-blue-950 rounded-xl p-2" type="submit">Login</button>
+
+                {loginError ? (
+                    <span></span>
+                ) : (
+                    <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
+                )}
+            </form>
+            {/* <div className={'absolute duration-1000 bg-blue-700 min-h-screen w-1/2 flex flex-col justify-center items-center gap-4 p-4' + (login ? ' left-full -translate-x-full' : ' left-0')}>
                 <h1>login</h1>
                 <form onSubmit={handleSubmit} className="border border-blue-950 flex flex-col justify-center items-center gap-4 p-4 rounded-3xl">
                     <label htmlFor="username">Username</label>
@@ -60,7 +92,7 @@ export default function Login() {
                     )}
                 </form>
                 <Link href="/SalePage">SalePage</Link>
-            </div>
+            </div> */}
         </div>
     );
 }
