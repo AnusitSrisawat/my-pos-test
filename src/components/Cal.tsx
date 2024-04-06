@@ -35,7 +35,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
 
                 <div className='w-full h-[80%] overflow-auto p-2'>
                     {items.map((item: any, index: number) => (
-                        <div className='flex flex-row gap-2 border-2 border-transparent hover:border-2 hover:border-black rounded-xl hover:scale-[0.99] duration-200'>
+                        <div key={item.id} className='flex flex-row gap-2 border-2 border-transparent hover:border-2 hover:border-black rounded-xl hover:scale-[0.99] duration-200'>
                             <div className='p-2'>{index + 1}</div>
                             <div
                                 className='relative w-full flex flex-col gap-2 p-2 '>

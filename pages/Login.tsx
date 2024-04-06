@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 export default function Login() {
@@ -53,7 +54,7 @@ export default function Login() {
                         <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
                     )}
                 </form>
-            <a href="/SalePage">SalePage</a>
+                <Link to="/SalePage">SalePage</Link>
             </div>
         </div>
     );

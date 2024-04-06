@@ -37,7 +37,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
             </div>
             <div className="relative grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-around items-start gap-4 w-full">
                 {product.map((item: any) => (
-                    <div
+                    <div key={item.id}
                         onClick={() => onAddData(item)}
                         className='cursor-pointer relative flex flex-col gap-2 p-2 border-2 border-transparent hover:border-2 hover:border-black rounded-xl hover:scale-105 duration-200'>
                         <div className='relative w-full h-44 object-cover rounded-xl'>
@@ -54,7 +54,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
                             {items.map((items: any) => {
                                 if (items.id === item.id && items.qty > 0) {
                                     return (
-                                        <div className='absolute top-0 right-0 bg-slate-100 font-medium rounded-lg p-1 m-1 w-6 h-6 flex justify-center items-center '>
+                                        <div key={items.id} className='absolute top-0 right-0 bg-slate-100 font-medium rounded-lg p-1 m-1 w-6 h-6 flex justify-center items-center '>
                                             {items.qty}
                                         </div>
                                     );
