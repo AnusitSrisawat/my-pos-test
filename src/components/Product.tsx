@@ -57,7 +57,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
                                 {items.map((items: any) => {
                                     if (items.id === item.id && items.qty > 0) {
                                         return (
-                                            <div key={items.id} className='absolute top-0 right-0 bg-slate-100 font-medium rounded-lg p-1 m-1 w-6 h-6 flex justify-center items-center '>
+                                            <div key={items.id} className='absolute top-0 right-0 bg-red-300 font-semibold text-xs rounded-lg p-1 m-1 w-6 h-6 flex justify-center items-center '>
                                                 {items.qty}
                                             </div>
                                         );
