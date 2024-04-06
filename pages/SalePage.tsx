@@ -21,7 +21,7 @@ export default function SalePage() {
         // Load items from localStorage on component mount
         const savedItems = localStorage.getItem('items');
         if (savedItems) {
-            setItems(JSON.parse(savedItems));              //save local storage มั้ย ??
+            // setItems(JSON.parse(savedItems));              //save local storage มั้ย ??
             // console.log("getItem", items);
         }
     }, []);
