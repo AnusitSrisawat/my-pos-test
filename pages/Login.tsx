@@ -1,15 +1,18 @@
 "use client"
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 
 export default function Login() {
 
+    const router = useRouter();
+    
     const [login, setLogin] = useState(true);
 
     const handleClick = async () => {
         const response = await fetch('/api/product').then(res => res.json());
-        console.log(response);
+        // console.log(response);
     };
 
     const [username, setUsername] = useState('');
@@ -28,7 +31,8 @@ export default function Login() {
             });
             if (response.ok) {
                 setLoginError(true)
-                console.log('Login successful');
+                // console.log('Login successful');
+                router.push('/SalePage');
             } else {
                 setLoginError(false)
                 console.error('Login failed');

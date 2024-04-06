@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-<div>123</div>
-        {/* <Login /> */}
+        
+        <Login />
         {/* <SalePage /> */}
 
       </body>

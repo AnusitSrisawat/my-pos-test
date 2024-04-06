@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
     // Redirect to login page if user is not authenticated
     if (!isAuthenticated && router.pathname !== '/Login') {
       router.push('/Login');
-      console.log("isAuthenticated");
+      // console.log("Login");
     }
   }, []);
 
