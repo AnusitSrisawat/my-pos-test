@@ -22,7 +22,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
     useEffect(() => {
         // console.log("items", items);
         // console.log("items", items.length);
-        
+
     }, [items]);
 
     return (
@@ -30,7 +30,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
             <div className='bg-slate-200 rounded-3xl w-full h-full flex flex-col justify-start items-start overflow-hidden'>
                 <div className='relative w-full h-[10%] flex items-center gap-4 p-2 bg-slate-500'>
                     <div className='text-center w-full'>รายการสินค้า</div>
-                    
+
                     {items.length < 1 ? (
                         ''
                     ) : (
@@ -70,7 +70,10 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
 
                 <div className='w-full h-[10%] flex items-center gap-4 p-2 bg-slate-500'>
                     <div className='text-center w-full'>ยอดรวม</div>
-                    <div className='text-center w-full'>{(sumPrice).toFixed(2)} ฿</div>
+                    <div className='flex flex-row items-center gap-4 w-full'>
+                        <div className='text-end w-full'>{(sumPrice).toFixed(2)} ฿</div>
+                        <div className='text-center w-auto whitespace-nowrap border border-black rounded-xl p-2 cursor-pointer bg-red-600'>ชำระเงิน</div>
+                    </div>
                 </div>
             </div>
         </div >
