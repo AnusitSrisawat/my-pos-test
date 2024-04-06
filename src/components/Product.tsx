@@ -25,7 +25,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
 
     const handleClick = async () => {
         const response = await fetch('/api/product').then(res => res.json());
-        console.log("api/product", response);
+        // console.log("api/product", response);
         setProduct(response);
     };
 
