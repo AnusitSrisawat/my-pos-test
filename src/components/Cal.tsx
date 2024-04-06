@@ -59,9 +59,9 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                                     </div>
                                 </div>
                                 <div className='flex justify-end gap-2'>
-                                    <div className='px-2 border border-black bg-green-500 rounded-xl cursor-pointer' onClick={() => onAddData(item)}>add</div>
-                                    <div className={'px-2 border border-black bg-yellow-500 rounded-xl cursor-pointer' + (item.qty <= 1 ? " grayscale" : "")} onClick={() => onSubData(item)} >sub</div>
-                                    <div className='px-2 border border-black bg-red-500 rounded-xl cursor-pointer' onClick={() => onDeleteData(item.id)}>delete</div>
+                                    <div className='px-2 border border-green-500 bg-green-500 rounded-xl cursor-pointer' onClick={() => onAddData(item)}>add</div>
+                                    <div className={'px-2 border bg-yellow-500 rounded-xl cursor-pointer' + (item.qty <= 1 ? " grayscale border-transparent text-gray-500" : " border-yellow-500")} onClick={() => onSubData(item)} >sub</div>
+                                    <div className='px-2 border border-red-500 bg-red-500 rounded-xl cursor-pointer' onClick={() => onDeleteData(item.id)}>delete</div>
                                 </div>
                             </div>
                         </div>
