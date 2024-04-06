@@ -2,7 +2,7 @@ import '/src/app/globals.css'
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { isUserAuthenticated } from '../pages/api/auth';
-import Login from "../../pages/Login";
+import Login from "../pages/Login";
 
 export default function MyApp({ Component, pageProps }) {
 
