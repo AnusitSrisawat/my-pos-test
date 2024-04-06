@@ -13,6 +13,7 @@ interface Item {
 export default function SalePage() {
 
     const [items, setItems] = useState<Item[]>([]);
+    const [sumPrice, setSumPrice] = useState(0);
 
     useEffect(() => {
         // Function to call when component starts
@@ -29,6 +30,8 @@ export default function SalePage() {
         // Save items to localStorage whenever items state changes
         localStorage.setItem('items', JSON.stringify(items));
         console.log("setItem", items);
+
+        handleSumPrice();
     }, [items]);
 
     const handleAddItem = (itemToAdd: any) => {
@@ -95,6 +98,12 @@ export default function SalePage() {
         setItems([])
     };
 
+    const handleSumPrice = () => {
+        const totalValues = items.map(item => item.qty * item.price); // Array of total values for each item
+        setSumPrice(totalValues.reduce((accumulator, currentValue) => accumulator + currentValue, 0)); // Sum of all total values
+
+    };
+
     // const handleEditItem = (id: number) => {
     //     const itemToEdit = items.find(item => item.id === id);
     //     if (itemToEdit) {
@@ -129,6 +138,7 @@ export default function SalePage() {
                 <div className='w-[30%] h-full bg-blue-300 overflow-auto'>
                     <Cal
                         items={items}
+                        sumPrice={sumPrice}
                         onAddData={handleAddItem}
                         onSubData={handleSubItem}
                         onDeleteData={handleDeleteItem}
