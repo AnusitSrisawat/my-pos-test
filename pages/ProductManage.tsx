@@ -1,9 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import Cal from '../src/components/Cal';
-import Product from '../src/components/Product';
-import { Dropdown, DropdownTrigger, Button, DropdownMenu, DropdownItem, User, Avatar } from '@nextui-org/react';
 import Nav from '@/components/Nav';
+import TableCRUD from '@/components/TableCRUD';
+import Table1 from '@/components/Table';
 
 interface Item {
     id: number;
@@ -12,7 +11,7 @@ interface Item {
     price: number;
 }
 
-export default function SalePage() {
+export default function ProductManage() {
 
     const [items, setItems] = useState<Item[]>([]);
     const [sumPrice, setSumPrice] = useState(0);
@@ -127,29 +126,21 @@ export default function SalePage() {
         <div className='h-screen w-full flex flex-col overflow-hidden'>
             <Nav onAddData={function (item: Item): void {
                 throw new Error('Function not implemented.');
-            } } onSubData={function (item: Item): void {
+            }} onSubData={function (item: Item): void {
                 throw new Error('Function not implemented.');
-            } } onDeleteData={function (item: number): void {
+            }} onDeleteData={function (item: number): void {
                 throw new Error('Function not implemented.');
-            } } onResetData={function (): void {
+            }} onResetData={function (): void {
                 throw new Error('Function not implemented.');
-            } } items={undefined} sumPrice={0} />
+            }} items={undefined} sumPrice={0} />
             <div className={"relative bg-blue-300 flex flex-row items-start w-full duration-500 gap-6 p-6" + (showNav ? ' h-[90%]' : ' h-[100%]')}>
-                <div className='w-[70%] h-full overflow-auto'>
-                    <Product
-                        items={items}
-                        onAddData={handleAddItem}
-                    />
-                </div>
-                <div className='w-[30%] h-full overflow-auto'>
-                    <Cal
-                        items={items}
-                        sumPrice={sumPrice}
-                        onAddData={handleAddItem}
-                        onSubData={handleSubItem}
-                        onDeleteData={handleDeleteItem}
-                        onResetData={handleResetItem}
-                    />
+                <div className='w-full h-full overflow-auto flex flex-col gap-4'>
+                    <div className="p-4 bg-white bg-opacity-40 rounded-3xl overflow-auto flex justify-start items-center">
+                        <div className='text-xl font-medium h-full flex justify-center items-center'>
+                            Product
+                        </div>
+                    </div>
+                    <Table1 />
                 </div>
             </div>
         </div>

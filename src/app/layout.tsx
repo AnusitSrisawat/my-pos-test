@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Kodchasan } from "next/font/google";
 import { Providers } from "./providers";
 import Login from "../../pages/Login";
+import Nav from "@/components/Nav";
 
 const kodchasan = Kodchasan({
    subsets: ["latin"],
@@ -23,6 +24,15 @@ export default function RootLayout({
       <html lang="en">
          <body className={kodchasan.className}>
             <Providers>
+               <Nav onAddData={function (item: any): void {
+                  throw new Error("Function not implemented.");
+               } } onSubData={function (item: any): void {
+                  throw new Error("Function not implemented.");
+               } } onDeleteData={function (item: number): void {
+                  throw new Error("Function not implemented.");
+               } } onResetData={function (): void {
+                  throw new Error("Function not implemented.");
+               } } items={undefined} sumPrice={0} />
                <Login />
             </Providers>
          </body>
