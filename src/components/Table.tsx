@@ -526,14 +526,14 @@ export default function App() {
                     total={pages}
                     onChange={setPage}
                 />
-                <div className="hidden sm:flex w-[30%] justify-end gap-2">
+                {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
                     <Button isDisabled={pages === 1} size="sm" variant="light" onPress={onPreviousPage} className="bg-blue-300">
                         Previous
                     </Button>
                     <Button isDisabled={pages === 1} size="sm" variant="light" onPress={onNextPage} className="bg-blue-300">
                         Next
                     </Button>
-                </div>
+                </div> */}
             </div>
         );
     }, [selectedKeys, items.length, page, pages, hasSearchFilter]);
