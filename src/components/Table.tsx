@@ -426,7 +426,7 @@ export default function App() {
                 <div className="flex justify-between gap-3 items-end">
                     <Input
                         isClearable
-                        className="w-full sm:max-w-[44%]"
+                        className="w-full sm:max-w-[44%] shadow-xl rounded-xl"
                         placeholder="Search by name..."
                         startContent={<SearchIcon />}
                         value={filterValue}
@@ -476,7 +476,7 @@ export default function App() {
                                 ))}
                             </DropdownMenu>
                         </Dropdown>
-                        <Button color="primary" endContent={<PlusIcon />}>
+                        <Button color="primary" endContent={<PlusIcon />} className="shadow-xl">
                             Add New
                         </Button>
                     </div>
@@ -525,6 +525,10 @@ export default function App() {
                     page={page}
                     total={pages}
                     onChange={setPage}
+                    classNames={{
+                        wrapper: "shadow-xl",
+                        base: "overflow-visible",
+                    }}
                 />
                 {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
                     <Button isDisabled={pages === 1} size="sm" variant="light" onPress={onPreviousPage} className="bg-slate-300">
@@ -547,9 +551,9 @@ export default function App() {
                 bottomContent={bottomContent}
                 bottomContentPlacement="outside"
                 classNames={{
-                    wrapper: "grow overflow-auto",
+                    wrapper: "grow overflow-auto shadow-xl",
                 }}
-                className="h-full "
+                className="h-full"
                 selectedKeys={selectedKeys}
                 selectionMode="multiple"
                 sortDescriptor={sortDescriptor}

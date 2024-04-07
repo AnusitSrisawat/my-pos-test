@@ -52,13 +52,13 @@ const Nav: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
     return (
         <div className={'relative w-full bg-slate-800 text-slate-300 flex flex-row justify-between items-center px-4 duration-500' + (showNav ? ' h-[10%] py-2' : ' h-0')}>
             <div className={'relative w-full flex flex-row justify-between items-center duration-500 overflow-hidden' + (showNav ? ' ' : ' h-0')}>
-                <div className='flex flex-row gap-8'>
+                <div className='flex flex-row gap-4'>
                     {
                         menu.map((item: any) => (
-                            <Dropdown className=''>
+                            <Dropdown key={item.name} className=''>
                                 <DropdownTrigger>
-                                    <Button className='text-white'
-                                        variant="bordered"
+                                    <Button className='font-semibold text-slate-200'
+                                        variant="light"
                                     >
                                         {item.name}
                                     </Button>
@@ -66,8 +66,8 @@ const Nav: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                                 <DropdownMenu aria-label="Static Actions">
 
                                     {(item.sub).map((itemsub: any) => (
-                                        <DropdownItem key={itemsub.name}>
-                                            <Link className='w-full h-full' href={itemsub.path} color="foreground" >{itemsub.name}</Link>
+                                        <DropdownItem key={itemsub.name} href={itemsub.path}>
+                                            {itemsub.name}
                                         </DropdownItem>
                                         // <DropdownItem key="delete" className="text-danger" color="danger">
                                         //     Delete file

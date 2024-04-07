@@ -9,8 +9,6 @@ export default function Login() {
 
     const router = useRouter();
 
-    const [login, setLogin] = useState(true);
-
     const handleClick = async () => {
         const response = await fetch('/api/product').then(res => res.json());
         // console.log(response);
@@ -45,54 +43,44 @@ export default function Login() {
     };
 
     return (
-        <div className="relative bg-blue-300 flex flex-col justify-center items-center gap-4 min-h-screen w-full">
-            {/* <div className='absolute z-10 p-2 bg-slate-300 rounded-xl m-2 cursor-pointer' onClick={() => setLogin(!login)}>switch</div> */}
-            <form onSubmit={handleSubmit} className="border border-blue-950 flex flex-col justify-center items-center gap-4 p-4 rounded-3xl bg-white">
-                <h1>login</h1>
-                <Input
-                    key="1"
-                    id="username"
-                    type="text"
-                    label="Username"
-                    labelPlacement="outside"
-                    // placeholder="Enter your email"
-                    // description="outside"
-                    value={username} onChange={(e) => setUsername(e.target.value)}
-                />
-                <Input
-                    key="2"
-                    id="password"
-                    type="password"
-                    label="password"
-                    labelPlacement="outside"
-                    // placeholder="Enter your email"
-                    // description="outside"
-                    value={password} onChange={(e) => setPassword(e.target.value)}
-                />
-                <button className="border border-blue-950 rounded-xl p-2" type="submit">Login</button>
+        <div className="relative bg-blue-300 flex flex-row justify-center items-center gap-4 min-h-screen w-full">
+            <div className='w-1/2 h-screen bg-blue-900'>
 
-                {loginError ? (
-                    <span></span>
-                ) : (
-                    <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
-                )}
-            </form>
-            {/* <div className={'absolute duration-1000 bg-blue-700 min-h-screen w-1/2 flex flex-col justify-center items-center gap-4 p-4' + (login ? ' left-full -translate-x-full' : ' left-0')}>
-                <h1>login</h1>
-                <form onSubmit={handleSubmit} className="border border-blue-950 flex flex-col justify-center items-center gap-4 p-4 rounded-3xl">
-                    <label htmlFor="username">Username</label>
-                    <input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-                    <label htmlFor="password">Password</label>
-                    <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            </div>
+            <div className='w-1/2 h-full flex flex-col gap-4 justify-center items-center'>
+                <form onSubmit={handleSubmit} className="w-fit shadow-xl border-2 border-blue-50 flex flex-col justify-center items-center gap-6 p-6 rounded-3xl bg-slate-100">
+                    <div className='text-xl font-semibold'>login</div>
+                    <Input
+                    className='border border-slate-200 rounded-xl shadow-xl'
+                        key="1"
+                        id="username"
+                        type="text"
+                        label="Username"
+                        labelPlacement="outside"
+                        // placeholder="Enter your email"
+                        // description="outside"
+                        value={username} onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <Input
+                    className='border border-slate-200 rounded-xl shadow-xl'
+                        key="2"
+                        id="password"
+                        type="password"
+                        label="password"
+                        labelPlacement="outside"
+                        // placeholder="Enter your email"
+                        // description="outside"
+                        value={password} onChange={(e) => setPassword(e.target.value)}
+                    />
                     <button className="border border-blue-950 rounded-xl p-2" type="submit">Login</button>
+
                     {loginError ? (
                         <span></span>
                     ) : (
                         <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
                     )}
                 </form>
-                <Link href="/SalePage">SalePage</Link>
-            </div> */}
+            </div>
         </div>
     );
 }

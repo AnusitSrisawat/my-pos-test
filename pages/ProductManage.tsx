@@ -135,14 +135,14 @@ export default function ProductManage() {
             }} items={undefined} sumPrice={0} />
 
             <div className={"relative bg-blue-300 flex flex-row items-start w-full duration-500 gap-6 p-6" + (showNav ? ' h-[90%]' : ' h-[100%]')}>
-                <div className='w-full h-full overflow-auto flex flex-col gap-4'>
+                <div className='w-full h-full flex flex-col gap-4'>
 
-                    <div className="w-full h-[10%] p-4 bg-slate-300 rounded-3xl overflow-auto flex justify-start items-center">
+                    <div className="shadow-xl w-full h-[10%] p-4 bg-slate-300 rounded-3xl overflow-auto flex justify-start items-center">
                         <div className='text-xl font-medium h-full flex justify-center items-center'>
                             Product
                         </div>
                     </div>
-                    <div className='w-full h-[90%] bg-slate-300 rounded-3xl overflow-auto flex justify-start items-center'>
+                    <div className='shadow-xl w-full h-[90%] bg-slate-300 rounded-3xl flex justify-start items-center'>
                         <Table1 />
                     </div>
 

@@ -29,7 +29,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
         <div className="relative flex flex-col items-start gap-4 h-full w-full">
             <div className='bg-slate-200 rounded-3xl w-full h-full flex flex-col justify-start items-start overflow-hidden'>
                 <div className='relative w-full h-[10%] flex items-center gap-4 p-2 bg-slate-400'>
-                    <div className='text-center w-full'>รายการสินค้า</div>
+                    <div className='text-center w-full font-medium text-xl'>รายการสินค้า</div>
 
                     {items.length < 1 ? (
                         ''
@@ -46,7 +46,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                     <div className='absolute bottom-0 h-5 bg-gradient-to-t from-slate-200 from-0% to-transparent to-100% w-full z-10'></div> */}
                     <div className='w-full h-full overflow-auto flex flex-col gap-2 p-2'>
                         {items.map((item: any, index: number) => (
-                            <div key={item.id} className='bg-slate-300 flex flex-row border-2 border-transparent hover:border-slate-500 rounded-xl hover:scale-[0.99] duration-200'>
+                            <div key={item.id} className='shadow-xl bg-slate-300 flex flex-row border-2 border-transparent hover:border-slate-500 rounded-xl hover:scale-[0.99] duration-200'>
                                 <div className='p-2'>{index + 1}.</div>
                                 <div
                                     className='relative w-full flex flex-col gap-2 p-2 '>
@@ -90,7 +90,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                     <div className='text-center w-full'>ยอดรวม</div>
                     <div className='flex flex-row items-center gap-4 w-full'>
                         <div className='text-end w-full font-bold whitespace-nowrap'>{sumPrice.toLocaleString()} ฿</div>
-                        <div className='text-center w-auto whitespace-nowrap border-2 border-transparent hover:border-blue-900  rounded-xl p-2 cursor-pointer bg-blue-600 text-white duration-200'>ชำระเงิน</div>
+                        <div className='text-center w-auto whitespace-nowrap border-2 border-transparent hover:border-blue-900  rounded-xl p-2 cursor-pointer bg-blue-600 text-white duration-200 shadow-xl'>ชำระเงิน</div>
                     </div>
                 </div>
             </div>

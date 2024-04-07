@@ -37,7 +37,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
             <div className='flex flex-col justify-start items-start p-2 rounded-3xl bg-slate-200 h-full w-full'>
                 <div className='w-full text-center h-[10%] flex flex-row justify-start items-center'>
                     <div className="flex flex-wrap gap-4 px-2">
-                        <Tabs key="lg" size="lg" aria-label="Tabs sizes" className=''>
+                        <Tabs key="lg" size="lg" aria-label="Tabs sizes" className='shadow-xl rounded-xl'>
                             <Tab key="photos" title="ขนม" />
                             <Tab key="music" title="นม" />
                             <Tab key="videos" title="เนย" />
@@ -51,7 +51,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
                         {product.map((item: any) => (
                             <div key={item.id}
                                 onClick={() => onAddData(item)}
-                                className='cursor-pointer bg-slate-100 bg-opacity-50 relative flex flex-col gap-2 p-2 border-2 border-transparent hover:border-2 hover:border-slate-400 rounded-xl hover:scale-105 duration-200'>
+                                className='shadow-xl cursor-pointer bg-slate-100 bg-opacity-50 relative flex flex-col gap-2 p-2 border-2 border-transparent hover:border-2 hover:border-slate-400 rounded-xl hover:scale-105 duration-200'>
                                 <Skeleton isLoaded={isLoaded} className="w-full h-44">
                                     <div className='relative w-full h-44 object-cover rounded-xl overflow-hidden'>
                                         <img className='w-full h-full object-cover rounded-xl hover:scale-110  duration-200' src={item.image} alt={item.name} />
