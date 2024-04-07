@@ -436,7 +436,7 @@ export default function App() {
                     <div className="flex gap-3">
                         <Dropdown>
                             <DropdownTrigger className="hidden sm:flex">
-                                <Button endContent={<ChevronDownIcon className="text-small" />} variant="light" className="bg-blue-300">
+                                <Button endContent={<ChevronDownIcon className="text-small" />} variant="light" className="bg-slate-300">
                                     Status
                                 </Button>
                             </DropdownTrigger>
@@ -457,7 +457,7 @@ export default function App() {
                         </Dropdown>
                         <Dropdown>
                             <DropdownTrigger className="hidden sm:flex">
-                                <Button endContent={<ChevronDownIcon className="text-small" />} variant="light" className="bg-blue-300">
+                                <Button endContent={<ChevronDownIcon className="text-small" />} variant="light" className="bg-slate-300">
                                     Columns
                                 </Button>
                             </DropdownTrigger>
@@ -527,10 +527,10 @@ export default function App() {
                     onChange={setPage}
                 />
                 {/* <div className="hidden sm:flex w-[30%] justify-end gap-2">
-                    <Button isDisabled={pages === 1} size="sm" variant="light" onPress={onPreviousPage} className="bg-blue-300">
+                    <Button isDisabled={pages === 1} size="sm" variant="light" onPress={onPreviousPage} className="bg-slate-300">
                         Previous
                     </Button>
-                    <Button isDisabled={pages === 1} size="sm" variant="light" onPress={onNextPage} className="bg-blue-300">
+                    <Button isDisabled={pages === 1} size="sm" variant="light" onPress={onNextPage} className="bg-slate-300">
                         Next
                     </Button>
                 </div> */}
@@ -540,7 +540,7 @@ export default function App() {
 
     return (
 
-        <div className="p-4 bg-white bg-opacity-40 rounded-3xl w-full h-full overflow-auto">
+        <div className="p-4 bg-slate-200 bg-opacity-60 rounded-3xl w-full h-full overflow-auto">
             <Table
                 aria-label="Example table with custom cells, pagination and sorting"
                 isHeaderSticky
