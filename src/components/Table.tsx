@@ -18,15 +18,17 @@ import {
     Selection,
     ChipProps,
     SortDescriptor,
-    Tooltip
+    Tooltip,
+    Select,
+    SelectItem
 } from "@nextui-org/react";
 import { PlusIcon } from "./PlusIcon";
 import { VerticalDotsIcon } from "./VerticalDotsIcon";
 import { ChevronDownIcon } from "./ChevronDownIcon";
 import { SearchIcon } from "./SearchIcon";
-import {EditIcon} from "./EditIcon";
-import {DeleteIcon} from "./DeleteIcon";
-import {EyeIcon} from "./EyeIcon";
+import { EditIcon } from "./EditIcon";
+import { DeleteIcon } from "./DeleteIcon";
+import { EyeIcon } from "./EyeIcon";
 
 const statusColorMap: Record<string, ChipProps["color"]> = {
     active: "success",
@@ -39,8 +41,8 @@ const columns = [
     { name: "NAME", uid: "name", sortable: true },
     { name: "AGE", uid: "age", sortable: true },
     { name: "ROLE", uid: "role", sortable: true },
-    { name: "TEAM", uid: "team" },
-    { name: "EMAIL", uid: "email" },
+    { name: "TEAM", uid: "team", sortable: true },
+    { name: "EMAIL", uid: "email", sortable: true },
     { name: "STATUS", uid: "status", sortable: true },
     { name: "ACTIONS", uid: "actions" },
 ];
@@ -349,39 +351,39 @@ export default function App() {
             case "actions":
                 return (
                     <div className="relative flex items-center gap-2">
-                      <Tooltip content="Details">
-                        <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
-                          <EyeIcon />
-                        </span>
-                      </Tooltip>
-                      <Tooltip content="Edit user">
-                        <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
-                          <EditIcon />
-                        </span>
-                      </Tooltip>
-                      <Tooltip color="danger" content="Delete user">
-                        <span className="text-lg text-danger cursor-pointer active:opacity-50">
-                          <DeleteIcon />
-                        </span>
-                      </Tooltip>
+                        <Tooltip content="Details">
+                            <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
+                                <EyeIcon />
+                            </span>
+                        </Tooltip>
+                        <Tooltip content="Edit user">
+                            <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
+                                <EditIcon />
+                            </span>
+                        </Tooltip>
+                        <Tooltip color="danger" content="Delete user">
+                            <span className="text-lg text-danger cursor-pointer active:opacity-50">
+                                <DeleteIcon />
+                            </span>
+                        </Tooltip>
                     </div>
-                  );
-                // return (
-                //     <div className="relative flex justify-end items-center gap-2">
-                //         <Dropdown>
-                //             <DropdownTrigger>
-                //                 <Button isIconOnly size="sm" variant="light">
-                //                     <VerticalDotsIcon className="text-default-300" />
-                //                 </Button>
-                //             </DropdownTrigger>
-                //             <DropdownMenu>
-                //                 <DropdownItem>View</DropdownItem>
-                //                 <DropdownItem>Edit</DropdownItem>
-                //                 <DropdownItem>Delete</DropdownItem>
-                //             </DropdownMenu>
-                //         </Dropdown>
-                //     </div>
-                // );
+                );
+            // return (
+            //     <div className="relative flex justify-end items-center gap-2">
+            //         <Dropdown>
+            //             <DropdownTrigger>
+            //                 <Button isIconOnly size="sm" variant="light">
+            //                     <VerticalDotsIcon className="text-default-300" />
+            //                 </Button>
+            //             </DropdownTrigger>
+            //             <DropdownMenu>
+            //                 <DropdownItem>View</DropdownItem>
+            //                 <DropdownItem>Edit</DropdownItem>
+            //                 <DropdownItem>Delete</DropdownItem>
+            //             </DropdownMenu>
+            //         </Dropdown>
+            //     </div>
+            // );
             default:
                 return cellValue;
         }
@@ -481,10 +483,12 @@ export default function App() {
                 </div>
                 <div className="flex justify-between items-center text-black">
                     <span className="text-small">Total {users.length} users</span>
-                    <label className="flex items-center text-small">
-                        Rows per page :
+                    <label className="flex text-small gap-2 justify-center items-center ">
+                        <div className="border-2 border-transparent">
+                            Rows per page :
+                        </div>
                         <select
-                            className="bg-transparent outline-none text-small cursor-pointer"
+                            className="cursor-pointer rounded-lg border-2 border-transparent hover:border-blue-300"
                             onChange={onRowsPerPageChange}
                         >
                             <option value="10">10</option>
