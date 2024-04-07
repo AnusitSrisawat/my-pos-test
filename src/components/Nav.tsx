@@ -104,9 +104,9 @@ const Nav = () => {
                     </Dropdown>
                 </div>
             </div>
-            <div className={'absolute text-xs h-4 flex justify-center items-start bottom-0 left-1/2 bg-slate-700 px-2 z-10 cursor-pointer ' + (showNav ? ' translate-y-0 rounded-t-lg leading-[1.1]' : ' translate-y-full rounded-b-lg leading-[0.8]')} onClick={() => { setShowNav(!showNav) }}>
+            {/* <div className={'absolute text-xs h-4 flex justify-center items-start bottom-0 left-1/2 bg-slate-700 px-2 z-10 cursor-pointer ' + (showNav ? ' translate-y-0 rounded-t-lg leading-[1.1]' : ' translate-y-full rounded-b-lg leading-[0.8]')} onClick={() => { setShowNav(!showNav) }}>
                 {showNav ? 'close' : 'open'}
-            </div>
+            </div> */}
         </div>
     );
 }

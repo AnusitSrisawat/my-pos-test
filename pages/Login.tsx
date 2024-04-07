@@ -45,7 +45,7 @@ export default function Login() {
     };
 
     return (
-        <div className="relative bg-gradient-to-l from-blue-400 from-0% to-blue-900 to-100% flex flex-row justify-center items-center min-h-screen w-full">
+        <div className="relative bg-gradient-to-l from-blue-400 from-0% to-blue-900 to-100% flex flex-row-reverse justify-center items-center min-h-screen w-full">
 
             <div className='w-1/2 h-screen flex flex-row justify-center items-center gap-4 text-[10vh] py-[15vh]'>
                 <div className='h-screen flex flex-row justify-end items-center gap-4 text-[10vh] py-[15vh] pointer-events-none'>
@@ -59,7 +59,7 @@ export default function Login() {
                         <div>p</div>
                         <div>o</div>
                         <div className='relative'>
-                            <div className='absolute z-0 top-0 left-1/2 -translate-x-1/2 opacity-30'>o</div>
+                            <div className='absolute z-0 top-0 left-1/2 -translate-x-1/2 opacity-40'>o</div>
                             <div className='relative z-10'>s</div>
                         </div>
                         <div>b</div>
@@ -67,12 +67,12 @@ export default function Login() {
                 </div>
             </div>
             <div className='w-1/2 h-full flex flex-row justify-center items-center gap-4'>
-                <div className='flex flex-row justify-center items-start'>
+                <div className='flex flex-row justify-center items-end'>
                     <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-4 border-gray-700 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-yellow-500">
                         <div className='text-xl font-semibold'>Login</div>
                         <Input
                             autoFocus
-                            className='border border-slate-200 rounded-xl shadow-xl'
+                            className='rounded-xl shadow-xl'
                             key="1"
                             id="username"
                             type="text"
@@ -87,7 +87,7 @@ export default function Login() {
                             variant="bordered"
                         />
                         <Input
-                            className='border border-slate-200 rounded-xl shadow-xl'
+                            className='rounded-xl shadow-xl'
                             key="2"
                             id="password"
                             type="password"
