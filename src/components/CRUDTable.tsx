@@ -422,11 +422,11 @@ export default function CRUDTable() {
     const topContent = React.useMemo(() => {
         return (
             <div className="flex flex-col gap-4">
-                <div className="flex justify-between gap-3 items-end">
+                <div className="flex justify-between gap-3 items-end flex-col md:flex-row">
                     <Input
                         isClearable
-                        className="w-full sm:max-w-[44%] shadow-xl rounded-xl"
-                        placeholder="Search by name..."
+                        className="w-full md:w-96 shadow-xl rounded-xl"
+                        placeholder="Search..."
                         startContent={<SearchIcon />}
                         value={filterValue}
                         onClear={() => onClear()}

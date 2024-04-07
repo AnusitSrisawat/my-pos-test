@@ -21,15 +21,15 @@ export default function CRUDModal() {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         placement="center"
-        className="overflow-auto "
+        className="overflow-hidden"
       >
         <ModalContent>
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">Add New</ModalHeader>
 
-              <ModalBody className="flex gap-6 h-full">
-                <div className="flex gap-6 flex-col max-h-[50%] overflow-auto">
+              <ModalBody style={{ maxHeight: "60vh" }} className="flex gap-6 h-full">
+                <div className="flex gap-6 flex-col overflow-auto">
 
                   <Input
                     autoFocus
@@ -50,6 +50,12 @@ export default function CRUDModal() {
                     type="password"
                     variant="bordered"
                   />
+
+                  <CheckBox />
+
+                  <Auticompletes />
+
+                  <RadioGroups />
 
                   <CheckBox />
 
