@@ -45,14 +45,26 @@ export default function Login() {
     };
 
     return (
-        <div className="relative bg-blue-300 flex flex-row justify-center items-center gap-4 min-h-screen w-full">
-            <div className='w-1/2 h-screen bg-blue-900'>
-
+        <div className="relative bg-gradient-to-l from-blue-400 from-0% to-blue-900 to-100% flex flex-row justify-center items-center gap-4 min-h-screen w-full">
+            <div className='w-1/2 h-screen flex flex-row justify-center items-center gap-4'>
+                <div className='flex flex-col justify-start items-center gap-4 text-[10vh] h-full py-[15vh]'>
+                    <div>g</div>
+                    <div>o</div>
+                    <div>o</div>
+                    <div>d</div>
+                </div>
+                <div className='flex flex-col justify-end items-center gap-4 text-[10vh] h-full py-[15vh]'>
+                    <div>p</div>
+                    <div>o</div>
+                    <div>s</div>
+                    <div>b</div>
+                </div>
             </div>
             <div className='w-1/2 h-full flex flex-col gap-4 justify-center items-center'>
-                <form onSubmit={handleSubmit} className="w-fit shadow-xl border-2 border-blue-50 flex flex-col justify-center items-center gap-6 p-6 rounded-3xl bg-slate-100">
+                <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-2 border-blue-50 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-slate-50">
                     <div className='text-xl font-semibold'>login</div>
-                    {/* <Input
+                    <Input
+                        autoFocus
                         className='border border-slate-200 rounded-xl shadow-xl'
                         key="1"
                         id="username"
@@ -62,6 +74,10 @@ export default function Login() {
                         // placeholder="Enter your email"
                         // description="outside"
                         value={username} onChange={(e) => setUsername(e.target.value)}
+                        endContent={
+                            <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                        }
+                        variant="bordered"
                     />
                     <Input
                         className='border border-slate-200 rounded-xl shadow-xl'
@@ -73,15 +89,20 @@ export default function Login() {
                         // placeholder="Enter your email"
                         // description="outside"
                         value={password} onChange={(e) => setPassword(e.target.value)}
-                    /> */}
+                        endContent={
+                            <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                        }
+                        variant="bordered"
+                    />
 
-                    <Input
+                    {/* <Input
                         autoFocus
                         endContent={
                             <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                         }
                         label="Email"
-                        placeholder="Enter your email"
+                        labelPlacement="outside"
+                        // placeholder="Enter your email"
                         variant="bordered"
                     />
                     <Input
@@ -89,10 +110,11 @@ export default function Login() {
                             <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                         }
                         label="Password"
-                        placeholder="Enter your password"
+                        labelPlacement="outside"
+                        // placeholder="Enter your password"
                         type="password"
                         variant="bordered"
-                    />
+                    /> */}
                     <div className="flex py-2 px-1 gap-4 justify-between">
                         <Checkbox
                             classNames={{
