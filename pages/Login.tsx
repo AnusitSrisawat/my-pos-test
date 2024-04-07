@@ -1,8 +1,7 @@
 "use client"
-import ImageUpload from '@/components/ImageUpload';
 import { LockIcon } from '@/components/LockIcon';
 import { MailIcon } from '@/components/MailIcon';
-import { Checkbox, Input } from '@nextui-org/react';
+import { Button, Checkbox, Input } from '@nextui-org/react';
 import { Link } from "@nextui-org/react";
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
@@ -69,11 +68,11 @@ export default function Login() {
             </div>
             <div className='w-1/2 h-full flex flex-row justify-center items-center gap-4'>
                 <div className='flex flex-row justify-center items-start'>
-                    <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-4 border-gray-700 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-slate-50">
-                        <div className='text-xl font-semibold'>login</div>
+                    <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-4 border-gray-700 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-yellow-600">
+                        <div className='text-xl font-semibold'>Login</div>
                         <Input
                             autoFocus
-                            className='border border-slate-200 rounded-xl shadow-xl'
+                            className='border border-slate-200 rounded-xl shadow-xl bg-yellow-600'
                             key="1"
                             id="username"
                             type="text"
@@ -83,12 +82,12 @@ export default function Login() {
                             // description="outside"
                             value={username} onChange={(e) => setUsername(e.target.value)}
                             endContent={
-                                <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                                <MailIcon className="text-2xl text-black pointer-events-none flex-shrink-0" />
                             }
                             variant="bordered"
                         />
                         <Input
-                            className='border border-slate-200 rounded-xl shadow-xl'
+                            className='border border-slate-200 rounded-xl shadow-xl bg-yellow-600'
                             key="2"
                             id="password"
                             type="password"
@@ -98,12 +97,12 @@ export default function Login() {
                             // description="outside"
                             value={password} onChange={(e) => setPassword(e.target.value)}
                             endContent={
-                                <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                                <LockIcon className="text-2xl text-black pointer-events-none flex-shrink-0" />
                             }
                             variant="bordered"
                         />
 
-                        <div className="flex py-2 px-1 gap-4 justify-between">
+                        <div className="flex py-2 gap-8 justify-between">
                             <Checkbox
                                 classNames={{
                                     label: "text-small",
@@ -111,12 +110,14 @@ export default function Login() {
                             >
                                 Remember me
                             </Checkbox>
-                            <Link color="primary" href="#" size="sm">
+                            <Link color="primary" href="#" size="md">
                                 Forgot password?
                             </Link>
                         </div>
 
-                        <button className="border-2 border-blue-950 rounded-xl p-2" type="submit">Login</button>
+                        <Button variant="light" className="bg-slate-300" type="submit">
+                            Login
+                        </Button>
 
                         {loginError ? (
                             <span></span>
