@@ -133,14 +133,19 @@ export default function ProductManage() {
             }} onResetData={function (): void {
                 throw new Error('Function not implemented.');
             }} items={undefined} sumPrice={0} />
+
             <div className={"relative bg-blue-300 flex flex-row items-start w-full duration-500 gap-6 p-6" + (showNav ? ' h-[90%]' : ' h-[100%]')}>
                 <div className='w-full h-full overflow-auto flex flex-col gap-4'>
-                    <div className="p-4 bg-white bg-opacity-40 rounded-3xl overflow-auto flex justify-start items-center">
+
+                    <div className="w-full h-[10%] p-4 bg-white bg-opacity-40 rounded-3xl overflow-auto flex justify-start items-center">
                         <div className='text-xl font-medium h-full flex justify-center items-center'>
                             Product
                         </div>
                     </div>
-                    <Table1 />
+                    <div className='w-full h-[90%]'>
+                        <Table1 />
+                    </div>
+
                 </div>
             </div>
         </div>

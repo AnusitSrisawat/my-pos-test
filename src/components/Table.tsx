@@ -540,15 +540,16 @@ export default function App() {
 
     return (
 
-        <div className="p-4 bg-white bg-opacity-40 rounded-3xl">
+        <div className="p-4 bg-white bg-opacity-40 rounded-3xl w-full h-full overflow-auto">
             <Table
                 aria-label="Example table with custom cells, pagination and sorting"
                 isHeaderSticky
                 bottomContent={bottomContent}
                 bottomContentPlacement="outside"
                 classNames={{
-                    wrapper: "max-h-full",
+                    wrapper: "grow overflow-auto",
                 }}
+                className="h-full "
                 selectedKeys={selectedKeys}
                 selectionMode="multiple"
                 sortDescriptor={sortDescriptor}
