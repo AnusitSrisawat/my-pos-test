@@ -1,4 +1,5 @@
 "use client"
+import ImageUpload from '@/components/ImageUpload';
 import { LockIcon } from '@/components/LockIcon';
 import { MailIcon } from '@/components/MailIcon';
 import { Checkbox, Input } from '@nextui-org/react';
@@ -45,97 +46,88 @@ export default function Login() {
     };
 
     return (
-        <div className="relative bg-gradient-to-l from-blue-400 from-0% to-blue-900 to-100% flex flex-row justify-center items-center gap-4 min-h-screen w-full">
-            <div className='w-1/2 h-screen flex flex-row justify-center items-center gap-4'>
-                <div className='flex flex-col justify-start items-center gap-4 text-[10vh] h-full py-[15vh]'>
-                    <div>g</div>
-                    <div>o</div>
-                    <div>o</div>
-                    <div>d</div>
-                </div>
-                <div className='flex flex-col justify-end items-center gap-4 text-[10vh] h-full py-[15vh]'>
-                    <div>p</div>
-                    <div>o</div>
-                    <div>s</div>
-                    <div>b</div>
+        <div className="relative bg-gradient-to-l from-blue-400 from-0% to-blue-900 to-100% flex flex-row justify-center items-center min-h-screen w-full">
+
+            <div className='w-1/2 h-screen flex flex-row justify-center items-center gap-4 text-[10vh] py-[15vh]'>
+                <div className='h-screen flex flex-row justify-end items-center gap-4 text-[10vh] py-[15vh]'>
+                    <div className='flex flex-col justify-start items-center gap-4 h-full'>
+                        <div>g</div>
+                        <div>o</div>
+                        <div>o</div>
+                        <div>d</div>
+                    </div>
+                    <div className='flex flex-col justify-end items-center gap-4 h-full'>
+                        <div>p</div>
+                        <div>o</div>
+                        <div className='relative'>
+                            <div className='absolute z-0 top-0 left-1/2 -translate-x-1/2 opacity-30'>o</div>
+                            <div className='relative z-10'>s</div>
+                        </div>
+                        <div>b</div>
+                    </div>
                 </div>
             </div>
-            <div className='w-1/2 h-full flex flex-col gap-4 justify-center items-center'>
-                <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-2 border-blue-50 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-slate-50">
-                    <div className='text-xl font-semibold'>login</div>
-                    <Input
-                        autoFocus
-                        className='border border-slate-200 rounded-xl shadow-xl'
-                        key="1"
-                        id="username"
-                        type="text"
-                        label="Username"
-                        labelPlacement="outside"
-                        // placeholder="Enter your email"
-                        // description="outside"
-                        value={username} onChange={(e) => setUsername(e.target.value)}
-                        endContent={
-                            <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                        }
-                        variant="bordered"
-                    />
-                    <Input
-                        className='border border-slate-200 rounded-xl shadow-xl'
-                        key="2"
-                        id="password"
-                        type="password"
-                        label="password"
-                        labelPlacement="outside"
-                        // placeholder="Enter your email"
-                        // description="outside"
-                        value={password} onChange={(e) => setPassword(e.target.value)}
-                        endContent={
-                            <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                        }
-                        variant="bordered"
-                    />
+            <div className='w-1/2 h-full flex flex-row justify-center items-center gap-4'>
+                <div className='flex flex-row justify-center items-start'>
+                    <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-4 border-gray-700 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-slate-50">
+                        <div className='text-xl font-semibold'>login</div>
+                        <Input
+                            autoFocus
+                            className='border border-slate-200 rounded-xl shadow-xl'
+                            key="1"
+                            id="username"
+                            type="text"
+                            label="Username"
+                            labelPlacement="outside"
+                            // placeholder="Enter your email"
+                            // description="outside"
+                            value={username} onChange={(e) => setUsername(e.target.value)}
+                            endContent={
+                                <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                            }
+                            variant="bordered"
+                        />
+                        <Input
+                            className='border border-slate-200 rounded-xl shadow-xl'
+                            key="2"
+                            id="password"
+                            type="password"
+                            label="password"
+                            labelPlacement="outside"
+                            // placeholder="Enter your email"
+                            // description="outside"
+                            value={password} onChange={(e) => setPassword(e.target.value)}
+                            endContent={
+                                <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                            }
+                            variant="bordered"
+                        />
 
-                    {/* <Input
-                        autoFocus
-                        endContent={
-                            <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                        }
-                        label="Email"
-                        labelPlacement="outside"
-                        // placeholder="Enter your email"
-                        variant="bordered"
-                    />
-                    <Input
-                        endContent={
-                            <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                        }
-                        label="Password"
-                        labelPlacement="outside"
-                        // placeholder="Enter your password"
-                        type="password"
-                        variant="bordered"
-                    /> */}
-                    <div className="flex py-2 px-1 gap-4 justify-between">
-                        <Checkbox
-                            classNames={{
-                                label: "text-small",
-                            }}
-                        >
-                            Remember me
-                        </Checkbox>
-                        <Link color="primary" href="#" size="sm">
-                            Forgot password?
-                        </Link>
+                        <div className="flex py-2 px-1 gap-4 justify-between">
+                            <Checkbox
+                                classNames={{
+                                    label: "text-small",
+                                }}
+                            >
+                                Remember me
+                            </Checkbox>
+                            <Link color="primary" href="#" size="sm">
+                                Forgot password?
+                            </Link>
+                        </div>
+
+                        <button className="border-2 border-blue-950 rounded-xl p-2" type="submit">Login</button>
+
+                        {loginError ? (
+                            <span></span>
+                        ) : (
+                            <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
+                        )}
+                    </form>
+                    <div className='h-full flex flex-row justify-center items-start my-5'>
+                        <img className='w-20 h-2w-20 object-contain rounded-xl rotate-90' src="/images/icons/card-pos-svgrepo-com.svg" alt="card" />
                     </div>
-
-                    <button className="border border-blue-950 rounded-xl p-2" type="submit">Login</button>
-
-                    {loginError ? (
-                        <span></span>
-                    ) : (
-                        <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
-                    )}
-                </form>
+                </div>
             </div>
         </div>
     );

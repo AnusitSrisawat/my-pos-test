@@ -41,7 +41,7 @@ const ImageUpload: React.FC = () => {
         <div className="relative rounded-xl">
           <img className="rounded-xl overflow-hidden w-full h-full object-contain border-2 border-slate-300" src={previewUrl} alt="Preview" style={{ maxWidth: "100%", maxHeight: "200px" }} />
           <button
-            className="absolute top-0 right-0 m-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+            className="absolute top-0 right-0 m-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600 w-6 h-6"
             onClick={handleDelete}
           >
             <DeleteIcon />
