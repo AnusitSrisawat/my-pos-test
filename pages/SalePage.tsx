@@ -125,15 +125,7 @@ export default function SalePage() {
 
     return (
         <div className='h-screen w-full flex flex-col overflow-hidden'>
-            <Nav onAddData={function (item: Item): void {
-                throw new Error('Function not implemented.');
-            } } onSubData={function (item: Item): void {
-                throw new Error('Function not implemented.');
-            } } onDeleteData={function (item: number): void {
-                throw new Error('Function not implemented.');
-            } } onResetData={function (): void {
-                throw new Error('Function not implemented.');
-            } } items={undefined} sumPrice={0} />
+            <Nav />
             <div className={"relative bg-blue-300 flex flex-row items-start w-full duration-500 gap-6 p-6" + (showNav ? ' h-[90%]' : ' h-[100%]')}>
                 <div className='w-[70%] h-full overflow-auto'>
                     <Product

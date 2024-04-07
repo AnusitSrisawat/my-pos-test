@@ -37,7 +37,8 @@ export default function Auticompletes() {
       <Autocomplete
         label="Favorite Animal"
         placeholder="Search an animal"
-        className="max-w-xs"
+        variant="bordered"
+        className=""
         defaultItems={animals}
       >
         {(item) => <AutocompleteItem key={item.value}>{item.label}</AutocompleteItem>}

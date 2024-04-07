@@ -2,22 +2,7 @@
 import { Dropdown, DropdownTrigger, Button, DropdownMenu, DropdownItem, User, Link } from '@nextui-org/react';
 import React, { useEffect, useState } from 'react';
 
-interface Item {
-    id: number;
-    name: string;
-    qty: number;
-    price: number;
-}
-interface ProductProps {
-    onAddData: (item: Item) => void;
-    onSubData: (item: Item) => void;
-    onDeleteData: (item: number) => void;
-    onResetData: () => void;
-    items: any;
-    sumPrice: number;
-}
-
-const Nav: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, onDeleteData, onResetData }) => {
+const Nav = () => {
 
     const [showNav, setShowNav] = useState(true);
     const menu = [
@@ -47,7 +32,7 @@ const Nav: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
         // console.log("items", items);
         // console.log("items", items.length);
 
-    }, [items]);
+    }, []);
 
     return (
         <div className={'relative w-full bg-slate-800 text-slate-300 flex flex-row justify-between items-center px-4 duration-500' + (showNav ? ' h-[10%] py-2' : ' h-0')}>

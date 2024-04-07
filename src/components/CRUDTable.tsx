@@ -27,7 +27,7 @@ import { SearchIcon } from "./SearchIcon";
 import { EditIcon } from "./EditIcon";
 import { DeleteIcon } from "./DeleteIcon";
 import { EyeIcon } from "./EyeIcon";
-import CRUDModal from "./CRUDModal";
+import CRUDModal from "../modals/CRUDModal";
 
 const statusColorMap: Record<string, ChipProps["color"]> = {
     active: "success",

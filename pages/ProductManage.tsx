@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Nav from '@/components/Nav';
 import CRUDTable from '@/components/CRUDTable';
-import CRUDModal from '@/components/CRUDModal';
+import CRUDModal from '@/modals/CRUDModal';
 
 interface Item {
     id: number;
@@ -124,15 +124,7 @@ export default function ProductManage() {
 
     return (
         <div className='h-screen w-full flex flex-col overflow-hidden'>
-            <Nav onAddData={function (item: Item): void {
-                throw new Error('Function not implemented.');
-            }} onSubData={function (item: Item): void {
-                throw new Error('Function not implemented.');
-            }} onDeleteData={function (item: number): void {
-                throw new Error('Function not implemented.');
-            }} onResetData={function (): void {
-                throw new Error('Function not implemented.');
-            }} items={undefined} sumPrice={0} />
+            <Nav />
 
             <div className={"relative bg-blue-300 flex flex-row items-start w-full duration-500 gap-6 p-6" + (showNav ? ' h-[90%]' : ' h-[100%]')}>
                 <div className='w-full h-full flex flex-col gap-4'>

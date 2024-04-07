@@ -24,16 +24,7 @@ export default function RootLayout({
       <html lang="en">
          <body className={kodchasan.className}>
             <Providers>
-               <Nav onAddData={function (item: any): void {
-                  throw new Error("Function not implemented.");
-               } } onSubData={function (item: any): void {
-                  throw new Error("Function not implemented.");
-               } } onDeleteData={function (item: number): void {
-                  throw new Error("Function not implemented.");
-               } } onResetData={function (): void {
-                  throw new Error("Function not implemented.");
-               } } items={undefined} sumPrice={0} />
-               <Login />
+               <Nav />
             </Providers>
          </body>
       </html>
