@@ -48,7 +48,7 @@ export default function Login() {
         <div className="relative bg-gradient-to-l from-blue-400 from-0% to-blue-900 to-100% flex flex-row justify-center items-center min-h-screen w-full">
 
             <div className='w-1/2 h-screen flex flex-row justify-center items-center gap-4 text-[10vh] py-[15vh]'>
-                <div className='h-screen flex flex-row justify-end items-center gap-4 text-[10vh] py-[15vh]'>
+                <div className='h-screen flex flex-row justify-end items-center gap-4 text-[10vh] py-[15vh] pointer-events-none'>
                     <div className='flex flex-col justify-start items-center gap-4 h-full'>
                         <div>g</div>
                         <div>o</div>
@@ -68,11 +68,11 @@ export default function Login() {
             </div>
             <div className='w-1/2 h-full flex flex-row justify-center items-center gap-4'>
                 <div className='flex flex-row justify-center items-start'>
-                    <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-4 border-gray-700 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-yellow-600">
+                    <form onSubmit={handleSubmit} className="w-fit shadow-2xl border-4 border-gray-700 flex flex-col justify-center items-center gap-4 p-6 rounded-3xl bg-yellow-500">
                         <div className='text-xl font-semibold'>Login</div>
                         <Input
                             autoFocus
-                            className='border border-slate-200 rounded-xl shadow-xl bg-yellow-600'
+                            className='border border-slate-200 rounded-xl shadow-xl'
                             key="1"
                             id="username"
                             type="text"
@@ -87,7 +87,7 @@ export default function Login() {
                             variant="bordered"
                         />
                         <Input
-                            className='border border-slate-200 rounded-xl shadow-xl bg-yellow-600'
+                            className='border border-slate-200 rounded-xl shadow-xl'
                             key="2"
                             id="password"
                             type="password"
@@ -122,7 +122,7 @@ export default function Login() {
                         {loginError ? (
                             <span></span>
                         ) : (
-                            <div className="text-red-500">log in ไม่ได้นะจ๊ะ</div>
+                            <div className="text-red-500 rounded-3xl px-1 text-center flex justify-center items-center font-semibold">Username or Password is incorrect</div>
                         )}
                     </form>
                     <div className='h-full flex flex-row justify-center items-start my-5'>
