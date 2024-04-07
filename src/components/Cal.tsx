@@ -28,7 +28,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
     return (
         <div className="relative flex flex-col items-start gap-4 p-6 h-full w-full">
             <div className='bg-slate-200 rounded-3xl w-full h-full flex flex-col justify-start items-start overflow-hidden'>
-                <div className='relative w-full h-[10%] flex items-center gap-4 p-2 bg-slate-300'>
+                <div className='relative w-full h-[10%] flex items-center gap-4 p-2 bg-slate-400'>
                     <div className='text-center w-full'>รายการสินค้า</div>
 
                     {items.length < 1 ? (
@@ -81,7 +81,7 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                     ))}
                 </div>
 
-                <div className='w-full h-[10%] flex items-center gap-4 p-2 bg-slate-300'>
+                <div className='w-full h-[10%] flex items-center gap-4 p-2 bg-slate-400'>
                     <div className='text-center w-full'>ยอดรวม</div>
                     <div className='flex flex-row items-center gap-4 w-full'>
                         <div className='text-end w-full font-bold'>{(sumPrice).toFixed(2)} ฿</div>

@@ -125,7 +125,6 @@ export default function SalePage() {
     return (
         <div className='h-screen w-full flex flex-col overflow-hidden'>
             <div className={'relative w-full bg-slate-800 text-slate-300 flex flex-row justify-between items-center px-4 duration-500' + (showNav ? ' h-[10%] py-2' : ' h-0')}>
-                
                 <div className='flex flex-row gap-8'>
                     <Dropdown className=''>
                         <DropdownTrigger>
@@ -155,8 +154,8 @@ export default function SalePage() {
                     </div>
                 </div> */}
 
-                <div className="flex items-center gap-4">
-                    <Dropdown placement="bottom-start">
+                <div className="flex items-center gap-4 px-8">
+                    <Dropdown placement="bottom-start" className=''>
                         <DropdownTrigger>
                             <User
                                 as="button"
@@ -192,7 +191,7 @@ export default function SalePage() {
                         </DropdownMenu>
                     </Dropdown>
                 </div>
-                <div className={'absolute h-5 flex justify-center items-start bottom-0 left-1/2 bg-slate-700 px-2 z-10 cursor-pointer ' + (showNav ? ' translate-y-0 rounded-t-lg leading-[1.1]' : ' translate-y-full rounded-b-lg leading-[0.8]')} onClick={() => { setShowNav(!showNav) }}>
+                <div className={'absolute text-xs h-4 flex justify-center items-start bottom-0 left-1/2 bg-slate-700 px-2 z-10 cursor-pointer ' + (showNav ? ' translate-y-0 rounded-t-lg leading-[1.1]' : ' translate-y-full rounded-b-lg leading-[0.8]')} onClick={() => { setShowNav(!showNav) }}>
                     {showNav ? 'close' : 'open'}
                 </div>
             </div>
