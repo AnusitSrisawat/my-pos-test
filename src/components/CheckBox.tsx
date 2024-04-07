@@ -5,7 +5,7 @@ export default function CheckBox() {
   return (
     <CheckboxGroup
       label="Select cities"
-      defaultValue={["buenos-aires", "london"]}
+      defaultValue={[""]}
     >
       <Checkbox value="buenos-aires">Buenos Aires</Checkbox>
       <Checkbox value="sydney">Sydney</Checkbox>

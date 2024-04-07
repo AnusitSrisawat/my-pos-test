@@ -6,6 +6,7 @@ import { PlusIcon } from "../components/PlusIcon";
 import CheckBox from "../components/CheckBox";
 import RadioGroups from "../components/RadioGroups";
 import Auticompletes from "../components/Autocompletes";
+import ImageUpload from "@/components/ImageUpload";
 
 
 export default function CRUDModal() {
@@ -57,11 +58,7 @@ export default function CRUDModal() {
 
                   <RadioGroups />
 
-                  <CheckBox />
-
-                  <Auticompletes />
-
-                  <RadioGroups />
+                  <ImageUpload />
 
                 </div>
               </ModalBody>
