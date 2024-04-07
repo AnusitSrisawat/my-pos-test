@@ -70,7 +70,7 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
                         <div className=''>
                             <div className='flex flex-row justify-between w-full'>
                                 <div className="">{item.name}</div>
-                                <p>{item.price} ฿</p>
+                                <p>{(item.price).toLocaleString()} ฿</p>
                             </div>
                             {/* <p className='text-xs'>{item.description}</p> */}
                             {/* <p>Category: {item.category}</p> */}
