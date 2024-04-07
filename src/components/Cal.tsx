@@ -42,8 +42,8 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                 </div>
 
                 <div className='relative w-full h-[80%]'>
-                    <div className='absolute top-0 h-5 bg-gradient-to-b from-slate-200 from-0% to-transparent to-100% w-full z-10'></div>
-                    <div className='absolute bottom-0 h-5 bg-gradient-to-t from-slate-200 from-0% to-transparent to-100% w-full z-10'></div>
+                    {/* <div className='absolute top-0 h-5 bg-gradient-to-b from-slate-200 from-0% to-transparent to-100% w-full z-10'></div>
+                    <div className='absolute bottom-0 h-5 bg-gradient-to-t from-slate-200 from-0% to-transparent to-100% w-full z-10'></div> */}
                     <div className='w-full h-full overflow-auto flex flex-col gap-2 p-2'>
                         {items.map((item: any, index: number) => (
                             <div key={item.id} className='bg-slate-300 flex flex-row border-2 border-transparent hover:border-slate-500 rounded-xl hover:scale-[0.99] duration-200'>

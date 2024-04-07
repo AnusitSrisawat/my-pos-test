@@ -45,9 +45,9 @@ const Product: React.FC<ProductProps> = ({ items, onAddData }) => {
                     </div>
                 </div>
                 <div className='relative w-full h-[90%]'>
-                        <div className='absolute top-0 h-5 bg-gradient-to-b from-slate-200 from-0% to-transparent to-100% w-full z-10'></div>
-                        <div className='absolute bottom-0 h-5 bg-gradient-to-t from-slate-200 from-0% to-transparent to-100% w-full z-10'></div>
-                    <div className="relative grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-around items-start gap-4 p-2 w-full h-full overflow-auto">
+                        {/* <div className='absolute top-0 h-4 bg-gradient-to-b from-slate-200 from-0% to-transparent to-100% w-full z-10'></div>
+                        <div className='absolute bottom-0 h-4 bg-gradient-to-t from-slate-200 from-0% to-transparent to-100% w-full z-10'></div> */}
+                    <div className="relative grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-around items-start gap-4 p-2 py-4 w-full h-full overflow-auto">
                         {product.map((item: any) => (
                             <div key={item.id}
                                 onClick={() => onAddData(item)}
