@@ -1,6 +1,8 @@
 "use client"
-import { Input } from '@nextui-org/react';
-import Link from 'next/link';
+import { LockIcon } from '@/components/LockIcon';
+import { MailIcon } from '@/components/MailIcon';
+import { Checkbox, Input } from '@nextui-org/react';
+import { Link } from "@nextui-org/react";
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
@@ -50,8 +52,8 @@ export default function Login() {
             <div className='w-1/2 h-full flex flex-col gap-4 justify-center items-center'>
                 <form onSubmit={handleSubmit} className="w-fit shadow-xl border-2 border-blue-50 flex flex-col justify-center items-center gap-6 p-6 rounded-3xl bg-slate-100">
                     <div className='text-xl font-semibold'>login</div>
-                    <Input
-                    className='border border-slate-200 rounded-xl shadow-xl'
+                    {/* <Input
+                        className='border border-slate-200 rounded-xl shadow-xl'
                         key="1"
                         id="username"
                         type="text"
@@ -62,7 +64,7 @@ export default function Login() {
                         value={username} onChange={(e) => setUsername(e.target.value)}
                     />
                     <Input
-                    className='border border-slate-200 rounded-xl shadow-xl'
+                        className='border border-slate-200 rounded-xl shadow-xl'
                         key="2"
                         id="password"
                         type="password"
@@ -71,7 +73,39 @@ export default function Login() {
                         // placeholder="Enter your email"
                         // description="outside"
                         value={password} onChange={(e) => setPassword(e.target.value)}
+                    /> */}
+
+                    <Input
+                        autoFocus
+                        endContent={
+                            <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                        }
+                        label="Email"
+                        placeholder="Enter your email"
+                        variant="bordered"
                     />
+                    <Input
+                        endContent={
+                            <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+                        }
+                        label="Password"
+                        placeholder="Enter your password"
+                        type="password"
+                        variant="bordered"
+                    />
+                    <div className="flex py-2 px-1 gap-4 justify-between">
+                        <Checkbox
+                            classNames={{
+                                label: "text-small",
+                            }}
+                        >
+                            Remember me
+                        </Checkbox>
+                        <Link color="primary" href="#" size="sm">
+                            Forgot password?
+                        </Link>
+                    </div>
+
                     <button className="border border-blue-950 rounded-xl p-2" type="submit">Login</button>
 
                     {loginError ? (

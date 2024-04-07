@@ -1,8 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Nav from '@/components/Nav';
-import TableCRUD from '@/components/TableCRUD';
-import Table1 from '@/components/Table';
+import CRUDTable from '@/components/CRUDTable';
+import CRUDModal from '@/components/CRUDModal';
 
 interface Item {
     id: number;
@@ -143,7 +143,7 @@ export default function ProductManage() {
                         </div>
                     </div>
                     <div className='shadow-xl w-full h-[90%] bg-slate-300 rounded-3xl flex justify-start items-center'>
-                        <Table1 />
+                        <CRUDTable />
                     </div>
 
                 </div>

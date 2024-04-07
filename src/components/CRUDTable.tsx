@@ -22,13 +22,12 @@ import {
     Select,
     SelectItem
 } from "@nextui-org/react";
-import { PlusIcon } from "./PlusIcon";
-import { VerticalDotsIcon } from "./VerticalDotsIcon";
 import { ChevronDownIcon } from "./ChevronDownIcon";
 import { SearchIcon } from "./SearchIcon";
 import { EditIcon } from "./EditIcon";
 import { DeleteIcon } from "./DeleteIcon";
 import { EyeIcon } from "./EyeIcon";
+import CRUDModal from "./CRUDModal";
 
 const statusColorMap: Record<string, ChipProps["color"]> = {
     active: "success",
@@ -260,7 +259,7 @@ const INITIAL_VISIBLE_COLUMNS = ["id", "name", "role", "status", "actions"];
 
 type User = typeof users[0];
 
-export default function App() {
+export default function CRUDTable() {
     const [filterValue, setFilterValue] = React.useState("");
     const [selectedKeys, setSelectedKeys] = React.useState<Selection>(new Set([]));
     const [visibleColumns, setVisibleColumns] = React.useState<Selection>(new Set(INITIAL_VISIBLE_COLUMNS));
@@ -476,9 +475,7 @@ export default function App() {
                                 ))}
                             </DropdownMenu>
                         </Dropdown>
-                        <Button color="primary" endContent={<PlusIcon />} className="shadow-xl">
-                            Add New
-                        </Button>
+                        <CRUDModal />
                     </div>
                 </div>
                 <div className="flex justify-between items-center text-black">
