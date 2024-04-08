@@ -71,7 +71,9 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                                                 </div>
                                                 <div className="flex flex-row gap-1 items-center cursor-pointer bg-red-500 rounded-lg p-1 border-2 border-transparent hover:border-red-700 hover:scale-95" onClick={() => onDeleteData(item.id)}>
                                                     {/* <img className='w-6 h-6 object-contain rounded-xl' src="/images/icons/bin-cancel-close-delete-garbage-remove-svgrepo-com.svg" alt="bin" /> */}
-                                                    <DeleteIcon />
+                                                    <div className="w-5 h-5">
+                                                        <DeleteIcon />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

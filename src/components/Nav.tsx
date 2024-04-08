@@ -7,21 +7,23 @@ const Nav = () => {
     const [showNav, setShowNav] = useState(true);
     const menu = [
         {
-            name: "CRUD",
+            name: "SHOP",
+            path: "/SalePage",
             sub: [
                 {
-                    name: "Product",
-                    path: "/ProductManage",
-                    sub: {}
+                    // name: "Shop",
+                    // path: "/SalePage",
+                    // sub: {}
                 },
             ]
         },
         {
-            name: "Sale Page",
+            name: "CRUD",
+            path: "",
             sub: [
                 {
-                    name: "Sale Page",
-                    path: "/SalePage",
+                    name: "Product",
+                    path: "/ProductManage",
                     sub: {}
                 },
             ]
@@ -37,32 +39,37 @@ const Nav = () => {
     return (
         <div className={'relative w-full bg-slate-800 text-slate-300 flex flex-row justify-between items-center px-4 duration-500' + (showNav ? ' h-[10%] py-2' : ' h-0')}>
             <div className={'relative w-full flex flex-row justify-between items-center duration-500 overflow-hidden' + (showNav ? ' ' : ' h-0')}>
-                <div className='flex flex-row gap-4'>
+                <div className='flex flex-row gap-4 px-8'>
                     {
                         menu.map((item: any) => (
-                            <Dropdown key={item.name} className=''>
-                                <DropdownTrigger>
-                                    <Button className='font-semibold text-slate-200'
-                                        variant="light"
-                                    >
+                            item.path == '' ? (
+                                <Dropdown key={item.name} className=''>
+                                    <DropdownTrigger>
+                                        <Button className='font-bold text-slate-200 text-lg' variant="light">
+                                            {item.name}
+                                        </Button>
+                                    </DropdownTrigger>
+                                    <DropdownMenu aria-label="Static Actions">
+                                        {item.sub.map((itemsub: any) => (
+                                            <DropdownItem key={itemsub.name} href={itemsub.path}>
+                                                <Button className='font-semibold text-slate-700 w-full text-base' variant="light">
+                                                    {itemsub.name}
+                                                </Button>
+                                            </DropdownItem>
+                                        ))}
+                                    </DropdownMenu>
+                                </Dropdown>
+                            ) : (
+                                <Link key={item.name} href={item.path} color="foreground" className='text-white'>
+                                    {/* Render a placeholder or other content for items without a path */}
+                                    <Button className='font-bold text-slate-200 text-lg' variant="light">
                                         {item.name}
                                     </Button>
-                                </DropdownTrigger>
-                                <DropdownMenu aria-label="Static Actions">
-
-                                    {(item.sub).map((itemsub: any) => (
-                                        <DropdownItem key={itemsub.name} href={itemsub.path}>
-                                            {itemsub.name}
-                                        </DropdownItem>
-                                        // <DropdownItem key="delete" className="text-danger" color="danger">
-                                        //     Delete file
-                                        // </DropdownItem>
-
-                                    ))}
-                                </DropdownMenu>
-                            </Dropdown>
+                                </Link>
+                            )
                         ))
                     }
+
                 </div>
 
                 <div className="flex items-center gap-4 px-8">
@@ -107,7 +114,7 @@ const Nav = () => {
             {/* <div className={'absolute text-xs h-4 flex justify-center items-start bottom-0 left-1/2 bg-slate-700 px-2 z-10 cursor-pointer ' + (showNav ? ' translate-y-0 rounded-t-lg leading-[1.1]' : ' translate-y-full rounded-b-lg leading-[0.8]')} onClick={() => { setShowNav(!showNav) }}>
                 {showNav ? 'close' : 'open'}
             </div> */}
-        </div>
+        </div >
     );
 }
 
