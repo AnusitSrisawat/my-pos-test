@@ -62,11 +62,11 @@ const Cal: React.FC<ProductProps> = ({ items, sumPrice, onAddData, onSubData, on
                                             <div className='flex flex-row gap-1 justify-end items-center h-full'>
                                                 <div className='flex flex-row gap-2 items-center bg-slate-400 h-full py-1 px-2 rounded-lg'>
                                                     <div className="cursor-pointer" onClick={() => onSubData(item)}>
-                                                        <img className={'w-4 h-4 object-contain rounded-xl hover:scale-150' + (item.qty <= 1 ? " opacity-30" : " ")} src="/images/icons/minus-svgrepo-com.svg" alt="minus" />
+                                                        <img className={'w-4 h-4 object-contain rounded-xl hover:scale-150 duration-250' + (item.qty <= 1 ? " opacity-30 pointer-events-none cursor-default" : " ")} src="/images/icons/minus-svgrepo-com.svg" alt="minus" />
                                                     </div>
                                                     <div className="bg-slate-300 px-2 rounded-lg">{item.qty}</div>
                                                     <div className="cursor-pointer" onClick={() => onAddData(item)}>
-                                                        <img className='w-4 h-4 object-contain rounded-xl hover:scale-150' src="/images/icons/plus-large-svgrepo-com.svg" alt="plus" />
+                                                        <img className='w-4 h-4 object-contain rounded-xl hover:scale-150 duration-250' src="/images/icons/plus-large-svgrepo-com.svg" alt="plus" />
                                                     </div>
                                                 </div>
                                                 <div className="flex flex-row gap-1 items-center cursor-pointer bg-red-500 rounded-lg p-1 border-2 border-transparent hover:border-red-700 hover:scale-95" onClick={() => onDeleteData(item.id)}>
